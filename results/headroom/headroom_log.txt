@@ -1,0 +1,44 @@
+====================================================================================================
+HEADROOM PROBE -- which metric can carry the refinement layer?
+  M=40  horizon=1200 s  seed=0  cap C=50
+  rain R=7.64 mm/h -> service floor 16.67 deg
+====================================================================================================
+building 40 pass tables ...
+  done in 480 s; passes/term mean 258
+  highest_elev         done
+  longest_remaining    done
+  best_quality         done
+  first_above_gate     done
+
+====================================================================================================
+metric                          highest_elev  longest_rema  best_quality  first_above_    spread  direction
+----------------------------------------------------------------------------------------------------
+M1 target elevation [deg]            68.7023       17.1126       68.7023       57.7653   51.5898  higher
+M1 target SNR [dB]                   28.7690       21.2220       28.7690       27.6396    7.5470  higher
+M2 A_clear [%]                      100.0000      100.0000      100.0000      100.0000    0.0000  higher
+M2 serving SNR mean [dB]             25.5003       25.0196       25.5003       24.7560    0.7443  higher
+M2 serving elev mean [deg]           41.6927       37.6089       41.6927       36.2923    5.4004  higher
+M3 unnecessary by elev [%]            0.0000        0.0000        0.0000        0.0000    0.0000  lower
+M4 frequency [1/h]                   15.0000        9.0000       15.0000       18.0000    9.0000  n/a
+M5 peak concurrent [cap 50]           3.0000        3.0000        3.0000        3.0000    0.0000  lower
+M5 busiest-sat share [%]              2.3404        2.3915        2.3404        1.6076    0.7839  lower
+
+====================================================================================================
+VERDICT
+====================================================================================================
+  M1 target elevation [deg]      SPREAD 51.5898 (higher is better)
+  M1 target SNR [dB]             SPREAD 7.5470 (higher is better)
+  M2 A_clear [%]                 NO ROOM    -- every rule ties; metric cannot separate any policy
+  M2 serving SNR mean [dB]       SPREAD 0.7443 (higher is better)
+  M2 serving elev mean [deg]     SPREAD 5.4004 (higher is better)
+  M3 unnecessary by elev [%]     NO ROOM    -- every rule ties; metric cannot separate any policy
+  M4 frequency [1/h]             AMBIGUOUS  -- spread 9.000, but neither direction is unambiguously better (below the geometric necessary rate means link loss)
+  M5 peak concurrent [cap 50]    NO ROOM    -- every rule ties; metric cannot separate any policy
+  M5 busiest-sat share [%]       SPREAD 0.7839 (lower is better)
+
+  A metric with NO ROOM cannot carry the framework-vs-refinement
+  decomposition: the framework layer's rule already attains it, so a
+  trained policy cannot move it and a zero is a statement about the
+  metric rather than about the layer.
+
+wrote D:\论文\LEO卫星快速搜网\gapmoh_sim\results\headroom\headroom.json

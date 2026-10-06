@@ -1,0 +1,9 @@
+# Normalise line endings in the repository (LF), check out native per platform.
+# Without this, committing from a Windows working copy produces spurious
+# whole-file diffs on any other machine.
+* text=auto
+
+# Binary artefacts — never normalised, never diffed as text.
+*.png binary
+*.pdf binary
+*.jpg binary

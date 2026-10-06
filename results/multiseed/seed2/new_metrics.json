@@ -1,0 +1,348 @@
+{
+  "spec": {
+    "M": 100,
+    "horizon_s": 3600.0,
+    "seed": 2,
+    "constellation": 5040
+  },
+  "rain": {
+    "implied_rate_mm_h": 7.644228019779442,
+    "service_floor_elev_deg": 16.667509547656717,
+    "rain_margin_db": 12.0,
+    "rain_availability_pct": 99.5
+  },
+  "service_floor": {
+    "implied_rain_rate_mm_h": 7.644228019779442,
+    "achieved_loss_db": 12.000000000000002,
+    "target_loss_db": 12.0,
+    "service_floor_elev_deg_implied_rate": 16.667509547656717,
+    "service_floor_elev_deg_at_cfg_rate": null
+  },
+  "per_scheme": {
+    "rss": {
+      "m1_target_quality": {
+        "n": 2312,
+        "target_snr_mean": 28.17062626256634,
+        "target_snr_p05": 24.39697431704629,
+        "target_snr_min": 22.767614776367836,
+        "target_elev_mean": 62.89579839417803,
+        "target_elev_p05": 30.449730894220934,
+        "target_elev_min": 23.01667075011634
+      },
+      "m2_availability": {
+        "a_clear": 1.0,
+        "serving_snr_mean": 26.219937424061982,
+        "serving_snr_p05": 22.949221000671386,
+        "serving_elev_mean_deg": 45.34968818648965,
+        "min_elev_deg": 22.431314638731433,
+        "a_rain": {
+          "7.644228019779442": 1.0
+        }
+      },
+      "m3_unnecessary": {
+        "n": 2312,
+        "budget_mean_s": 52.75934462975764,
+        "budget_median_s": 49.94118967354257,
+        "share_by_time": {
+          "30.0": 1.0,
+          "60.0": 0.07006920415224914,
+          "120.0": 0.0008650519031141869
+        },
+        "share_by_elevation": 1.0,
+        "serving_elev_at_init_median_deg": 22.45482834024604
+      },
+      "m4_frequency_per_h": 23.12,
+      "n_terminal": 100,
+      "n_handover": 2312,
+      "label": "RSS-Threshold",
+      "timing_success_pct": 100.0
+    },
+    "dijkstra": {
+      "m1_target_quality": {
+        "n": 1200,
+        "target_snr_mean": 21.097442805453316,
+        "target_snr_p05": 20.669654827429476,
+        "target_snr_min": 20.620036169312883,
+        "target_elev_mean": 16.666195581226738,
+        "target_elev_p05": 15.172224430870004,
+        "target_elev_min": 15.003453747037094
+      },
+      "m2_availability": {
+        "a_clear": 1.0,
+        "serving_snr_mean": 25.855885415506755,
+        "serving_snr_p05": 21.63370012283325,
+        "serving_elev_mean_deg": 42.62487489299395,
+        "min_elev_deg": 15.280553613609266,
+        "a_rain": {
+          "7.644228019779442": 0.9873886836476765
+        }
+      },
+      "m3_unnecessary": {
+        "n": 1200,
+        "budget_mean_s": 90.0,
+        "budget_median_s": 90.0,
+        "share_by_time": {
+          "30.0": 1.0,
+          "60.0": 1.0,
+          "120.0": 0.0
+        },
+        "share_by_elevation": 1.0,
+        "serving_elev_at_init_median_deg": 31.045960890312728
+      },
+      "m4_frequency_per_h": 12.0,
+      "n_terminal": 100,
+      "n_handover": 1200,
+      "label": "Graph-Dijkstra",
+      "timing_success_pct": 100.0
+    },
+    "cnnlstm": {
+      "m1_target_quality": {
+        "n": 2113,
+        "target_snr_mean": 28.633799042893934,
+        "target_snr_p05": 27.836323736394768,
+        "target_snr_min": 26.914527797139485,
+        "target_elev_mean": 65.49637923332942,
+        "target_elev_p05": 54.65350738714895,
+        "target_elev_min": 46.26155324137879
+      },
+      "m2_availability": {
+        "a_clear": 1.0,
+        "serving_snr_mean": 26.906885244054756,
+        "serving_snr_p05": 23.482160301208495,
+        "serving_elev_mean_deg": 51.033891792203455,
+        "min_elev_deg": 24.10879012803616,
+        "a_rain": {
+          "7.644228019779442": 1.0
+        }
+      },
+      "m3_unnecessary": {
+        "n": 2113,
+        "budget_mean_s": 60.0,
+        "budget_median_s": 60.0,
+        "share_by_time": {
+          "30.0": 1.0,
+          "60.0": 1.0,
+          "120.0": 0.0
+        },
+        "share_by_elevation": 1.0,
+        "serving_elev_at_init_median_deg": 24.430080511366658
+      },
+      "m4_frequency_per_h": 21.13,
+      "n_terminal": 100,
+      "n_handover": 2113,
+      "label": "CNN-LSTM-Predict",
+      "timing_success_pct": 100.0
+    },
+    "madrl_std": {
+      "m1_target_quality": {
+        "n": 1273,
+        "target_snr_mean": 22.950121927830605,
+        "target_snr_p05": 22.325331260144637,
+        "target_snr_min": 22.267138965139125,
+        "target_elev_mean": 23.820299014230713,
+        "target_elev_p05": 21.229825204824188,
+        "target_elev_min": 21.000759555490816
+      },
+      "m2_availability": {
+        "a_clear": 1.0,
+        "serving_snr_mean": 26.058058317196156,
+        "serving_snr_p05": 22.809193840026854,
+        "serving_elev_mean_deg": 43.468507148743186,
+        "min_elev_deg": 16.611491276221848,
+        "a_rain": {
+          "7.644228019779442": 0.9999830560262215
+        }
+      },
+      "m3_unnecessary": {
+        "n": 1273,
+        "budget_mean_s": 69.03766696627962,
+        "budget_median_s": 41.65885845124717,
+        "share_by_time": {
+          "30.0": 1.0,
+          "60.0": 0.07855459544383346,
+          "120.0": 0.07855459544383346
+        },
+        "share_by_elevation": 0.9520816967792616,
+        "serving_elev_at_init_median_deg": 20.99999999993149
+      },
+      "m4_frequency_per_h": 12.73,
+      "n_terminal": 100,
+      "n_handover": 1273,
+      "label": "MADRL-Std",
+      "timing_success_pct": 100.0
+    },
+    "grid_only": {
+      "m1_target_quality": {
+        "n": 1611,
+        "target_snr_mean": 28.717882932238048,
+        "target_snr_p05": 27.800693423316915,
+        "target_snr_min": 27.704459893513203,
+        "target_elev_mean": 67.94802937800814,
+        "target_elev_p05": 54.282329754801665,
+        "target_elev_min": 53.302627518810986
+      },
+      "m2_availability": {
+        "a_clear": 1.0,
+        "serving_snr_mean": 25.390927104219355,
+        "serving_snr_p05": 21.034339427947998,
+        "serving_elev_mean_deg": 41.004300362129925,
+        "min_elev_deg": 14.990123639439204,
+        "a_rain": {
+          "7.644228019779442": 0.942114941251632
+        }
+      },
+      "m3_unnecessary": {
+        "n": 1611,
+        "budget_mean_s": 0.014500000000099095,
+        "budget_median_s": 0.014499999999998181,
+        "share_by_time": {
+          "30.0": 0.0,
+          "60.0": 0.0,
+          "120.0": 0.0
+        },
+        "share_by_elevation": 0.0,
+        "serving_elev_at_init_median_deg": 15.00181592276051
+      },
+      "m4_frequency_per_h": 16.11,
+      "n_terminal": 100,
+      "n_handover": 1611,
+      "label": "Grid-Only",
+      "timing_success_pct": 100.0
+    },
+    "gapmoh": {
+      "m1_target_quality": {
+        "n": 1611,
+        "target_snr_mean": 28.717424698064473,
+        "target_snr_p05": 27.801167645336733,
+        "target_snr_min": 27.704933834129164,
+        "target_elev_mean": 67.93837412920578,
+        "target_elev_p05": 54.287239130324764,
+        "target_elev_min": 53.3073739167146
+      },
+      "m2_availability": {
+        "a_clear": 1.0,
+        "serving_snr_mean": 25.390373748316666,
+        "serving_snr_p05": 21.03398546218872,
+        "serving_elev_mean_deg": 40.9995586521082,
+        "min_elev_deg": 14.988834953497552,
+        "a_rain": {
+          "7.644228019779442": 0.9420693869614734
+        }
+      },
+      "m3_unnecessary": {
+        "n": 1611,
+        "budget_mean_s": 0.005200000000037765,
+        "budget_median_s": 0.005200000000058935,
+        "share_by_time": {
+          "30.0": 0.0,
+          "60.0": 0.0,
+          "120.0": 0.0
+        },
+        "share_by_elevation": 0.0,
+        "serving_elev_at_init_median_deg": 15.000651209675526
+      },
+      "m4_frequency_per_h": 16.11,
+      "n_terminal": 100,
+      "n_handover": 1611,
+      "label": "GAP-MOH",
+      "timing_success_pct": 100.0
+    }
+  },
+  "spreads": {
+    "M1 target elev mean": {
+      "values": [
+        62.89579839417803,
+        16.666195581226738,
+        65.49637923332942,
+        23.820299014230713,
+        67.94802937800814,
+        67.93837412920578
+      ],
+      "spread": 51.281833796781406,
+      "min": 16.666195581226738,
+      "max": 67.94802937800814
+    },
+    "M2 A_rain": {
+      "values": [
+        100.0,
+        98.73886836476765,
+        100.0,
+        99.99830560262215,
+        94.2114941251632,
+        94.20693869614733
+      ],
+      "spread": 5.793061303852667,
+      "min": 94.20693869614733,
+      "max": 100.0
+    },
+    "M3 unnecessary by elev": {
+      "values": [
+        100.0,
+        100.0,
+        100.0,
+        95.20816967792615,
+        0.0,
+        0.0
+      ],
+      "spread": 100.0,
+      "min": 0.0,
+      "max": 100.0
+    },
+    "M4 frequency": {
+      "values": [
+        23.12,
+        12.0,
+        21.13,
+        12.73,
+        16.11,
+        16.11
+      ],
+      "spread": 11.120000000000001,
+      "min": 12.0,
+      "max": 23.12
+    }
+  },
+  "table7_published": {
+    "label": "CN 表 7",
+    "success_pct": [
+      79.6,
+      87.0,
+      90.1,
+      92.4,
+      94.1,
+      96.8
+    ],
+    "unnecessary_pct": [
+      23.4,
+      15.1,
+      11.6,
+      8.3,
+      6.7,
+      4.1
+    ],
+    "freq_per_h": [
+      12.0,
+      10.8,
+      10.4,
+      10.0,
+      9.8,
+      9.6
+    ],
+    "mean_snr_db": [
+      14.2,
+      16.8,
+      17.2,
+      17.9,
+      18.3,
+      19.1
+    ]
+  },
+  "report_order": [
+    "rss",
+    "dijkstra",
+    "cnnlstm",
+    "madrl_std",
+    "grid_only",
+    "gapmoh"
+  ]
+}

@@ -1,0 +1,56 @@
+{
+  "spec": {
+    "horizon_s": 900.0,
+    "seed": 0,
+    "capacity_per_sat": 50,
+    "n_lane": 3,
+    "sigma_deg": 0.5,
+    "arm": "gapmoh"
+  },
+  "rows": [
+    {
+      "deployment": "lane",
+      "terminals": 50,
+      "peak_concurrent": 15,
+      "peak_over_capacity": 0,
+      "overflow_terminal_seconds": 0.0,
+      "top1_share": 0.08208199088990112,
+      "n_active_sat": 53,
+      "mean_load_active_sat": 0.9433962264150944,
+      "cap_binds": false
+    },
+    {
+      "deployment": "lane",
+      "terminals": 100,
+      "peak_concurrent": 28,
+      "peak_over_capacity": 0,
+      "overflow_terminal_seconds": 0.0,
+      "top1_share": 0.07715809354516165,
+      "n_active_sat": 64,
+      "mean_load_active_sat": 1.5625,
+      "cap_binds": false
+    },
+    {
+      "deployment": "lane",
+      "terminals": 200,
+      "peak_concurrent": 49,
+      "peak_over_capacity": 0,
+      "overflow_terminal_seconds": 0.0,
+      "top1_share": 0.06489556715920454,
+      "n_active_sat": 67,
+      "mean_load_active_sat": 2.985074626865672,
+      "cap_binds": false
+    },
+    {
+      "deployment": "lane",
+      "terminals": 300,
+      "peak_concurrent": 71,
+      "peak_over_capacity": 21,
+      "overflow_terminal_seconds": 15790.7,
+      "top1_share": 0.060572158649039,
+      "n_active_sat": 70,
+      "mean_load_active_sat": 4.285714285714286,
+      "cap_binds": true
+    }
+  ]
+}

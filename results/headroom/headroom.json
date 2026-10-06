@@ -1,0 +1,299 @@
+{
+  "spec": {
+    "terminals": 40,
+    "horizon_s": 1200.0,
+    "seed": 0,
+    "capacity_per_sat": 50
+  },
+  "rain": {
+    "implied_rain_rate_mm_h": 7.644228019779442,
+    "achieved_loss_db": 12.000000000000002,
+    "target_loss_db": 12.0,
+    "service_floor_elev_deg_implied_rate": 16.667509547656717,
+    "service_floor_elev_deg_at_cfg_rate": null
+  },
+  "target_rules": [
+    "highest_elev",
+    "longest_remaining",
+    "best_quality",
+    "first_above_gate"
+  ],
+  "per_rule": {
+    "highest_elev": {
+      "m1_target_quality": {
+        "n": 200,
+        "target_snr_mean": 28.769031448226677,
+        "target_snr_p05": 27.843195429742288,
+        "target_snr_min": 27.771434286628548,
+        "target_elev_mean": 68.70232245247912,
+        "target_elev_p05": 54.7256455563683,
+        "target_elev_min": 53.98100209966388
+      },
+      "m2_availability": {
+        "a_clear": 1.0,
+        "serving_snr_mean": 25.500324445485614,
+        "serving_snr_p05": 21.066723537445068,
+        "serving_elev_mean_deg": 41.6926726574351,
+        "min_elev_deg": 14.989956410795111,
+        "a_rain": {
+          "7.644228019779442": 0.9462544787934337
+        }
+      },
+      "m3_unnecessary": {
+        "n": 200,
+        "budget_mean_s": 0.005199999999989586,
+        "budget_median_s": 0.005200000000002092,
+        "share_by_time": {
+          "30.0": 0.0,
+          "60.0": 0.0,
+          "120.0": 0.0
+        },
+        "share_by_elevation": 0.0,
+        "serving_elev_at_init_median_deg": 15.000651481461986
+      },
+      "m4_frequency_per_h": 15.000000000000002,
+      "n_terminal": 40,
+      "n_handover": 200,
+      "m5_concurrency": {
+        "n_traces_used": 40,
+        "capacity_per_sat": 50,
+        "peak_concurrent": 3,
+        "peak_over_capacity": 0,
+        "overflow_terminal_seconds": 0.0,
+        "top1_share": 0.023404299641696526,
+        "n_active_sat": 185,
+        "mean_load_active_sat": 0.21621621621621623
+      }
+    },
+    "longest_remaining": {
+      "m1_target_quality": {
+        "n": 120,
+        "target_snr_mean": 21.22204722341387,
+        "target_snr_p05": 20.752649601171317,
+        "target_snr_min": 20.63327669226406,
+        "target_elev_mean": 17.11255972010722,
+        "target_elev_p05": 15.455969478389811,
+        "target_elev_min": 15.048427115971256
+      },
+      "m2_availability": {
+        "a_clear": 1.0,
+        "serving_snr_mean": 25.01960392081333,
+        "serving_snr_p05": 21.184640836715698,
+        "serving_elev_mean_deg": 37.6089028468739,
+        "min_elev_deg": 14.991532007370585,
+        "a_rain": {
+          "7.644228019779442": 0.957399383384718
+        }
+      },
+      "m3_unnecessary": {
+        "n": 120,
+        "budget_mean_s": 0.005200000000002092,
+        "budget_median_s": 0.005200000000002092,
+        "share_by_time": {
+          "30.0": 0.0,
+          "60.0": 0.0,
+          "120.0": 0.0
+        },
+        "share_by_elevation": 0.0,
+        "serving_elev_at_init_median_deg": 15.000649716652923
+      },
+      "m4_frequency_per_h": 9.0,
+      "n_terminal": 40,
+      "n_handover": 120,
+      "m5_concurrency": {
+        "n_traces_used": 40,
+        "capacity_per_sat": 50,
+        "peak_concurrent": 3,
+        "peak_over_capacity": 0,
+        "overflow_terminal_seconds": 0.0,
+        "top1_share": 0.023914673777185234,
+        "n_active_sat": 128,
+        "mean_load_active_sat": 0.3125
+      }
+    },
+    "best_quality": {
+      "m1_target_quality": {
+        "n": 200,
+        "target_snr_mean": 28.769031448226677,
+        "target_snr_p05": 27.843195429742288,
+        "target_snr_min": 27.771434286628548,
+        "target_elev_mean": 68.70232245247912,
+        "target_elev_p05": 54.7256455563683,
+        "target_elev_min": 53.98100209966388
+      },
+      "m2_availability": {
+        "a_clear": 1.0,
+        "serving_snr_mean": 25.500324445485614,
+        "serving_snr_p05": 21.066723537445068,
+        "serving_elev_mean_deg": 41.6926726574351,
+        "min_elev_deg": 14.989956410795111,
+        "a_rain": {
+          "7.644228019779442": 0.9462544787934337
+        }
+      },
+      "m3_unnecessary": {
+        "n": 200,
+        "budget_mean_s": 0.005199999999989586,
+        "budget_median_s": 0.005200000000002092,
+        "share_by_time": {
+          "30.0": 0.0,
+          "60.0": 0.0,
+          "120.0": 0.0
+        },
+        "share_by_elevation": 0.0,
+        "serving_elev_at_init_median_deg": 15.000651481461986
+      },
+      "m4_frequency_per_h": 15.000000000000002,
+      "n_terminal": 40,
+      "n_handover": 200,
+      "m5_concurrency": {
+        "n_traces_used": 40,
+        "capacity_per_sat": 50,
+        "peak_concurrent": 3,
+        "peak_over_capacity": 0,
+        "overflow_terminal_seconds": 0.0,
+        "top1_share": 0.023404299641696526,
+        "n_active_sat": 185,
+        "mean_load_active_sat": 0.21621621621621623
+      }
+    },
+    "first_above_gate": {
+      "m1_target_quality": {
+        "n": 240,
+        "target_snr_mean": 27.639649309332313,
+        "target_snr_p05": 23.328620343217665,
+        "target_snr_min": 22.77300100620066,
+        "target_elev_mean": 57.765296447533046,
+        "target_elev_p05": 25.41125718183291,
+        "target_elev_min": 23.038953235652897
+      },
+      "m2_availability": {
+        "a_clear": 1.0,
+        "serving_snr_mean": 24.75599337264246,
+        "serving_snr_p05": 20.967274570465086,
+        "serving_elev_mean_deg": 36.29231675664112,
+        "min_elev_deg": 14.990552302111514,
+        "a_rain": {
+          "7.644228019779442": 0.9312203149737523
+        }
+      },
+      "m3_unnecessary": {
+        "n": 240,
+        "budget_mean_s": 0.005199999999991907,
+        "budget_median_s": 0.005200000000002092,
+        "share_by_time": {
+          "30.0": 0.0,
+          "60.0": 0.0,
+          "120.0": 0.0
+        },
+        "share_by_elevation": 0.0,
+        "serving_elev_at_init_median_deg": 15.000643750114856
+      },
+      "m4_frequency_per_h": 18.0,
+      "n_terminal": 40,
+      "n_handover": 240,
+      "m5_concurrency": {
+        "n_traces_used": 40,
+        "capacity_per_sat": 50,
+        "peak_concurrent": 3,
+        "peak_over_capacity": 0,
+        "overflow_terminal_seconds": 0.0,
+        "top1_share": 0.016075743688025997,
+        "n_active_sat": 208,
+        "mean_load_active_sat": 0.1923076923076923
+      }
+    }
+  },
+  "verdicts": {
+    "M1 target elevation [deg]": {
+      "values": [
+        68.70232245247912,
+        17.11255972010722,
+        68.70232245247912,
+        57.765296447533046
+      ],
+      "spread": 51.5897627323719,
+      "better": "higher"
+    },
+    "M1 target SNR [dB]": {
+      "values": [
+        28.769031448226677,
+        21.22204722341387,
+        28.769031448226677,
+        27.639649309332313
+      ],
+      "spread": 7.546984224812807,
+      "better": "higher"
+    },
+    "M2 A_clear [%]": {
+      "values": [
+        100.0,
+        100.0,
+        100.0,
+        100.0
+      ],
+      "spread": 0.0,
+      "better": "higher"
+    },
+    "M2 serving SNR mean [dB]": {
+      "values": [
+        25.500324445485614,
+        25.01960392081333,
+        25.500324445485614,
+        24.75599337264246
+      ],
+      "spread": 0.7443310728431527,
+      "better": "higher"
+    },
+    "M2 serving elev mean [deg]": {
+      "values": [
+        41.6926726574351,
+        37.6089028468739,
+        41.6926726574351,
+        36.29231675664112
+      ],
+      "spread": 5.400355900793976,
+      "better": "higher"
+    },
+    "M3 unnecessary by elev [%]": {
+      "values": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "spread": 0.0,
+      "better": "lower"
+    },
+    "M4 frequency [1/h]": {
+      "values": [
+        15.000000000000002,
+        9.0,
+        15.000000000000002,
+        18.0
+      ],
+      "spread": 9.0,
+      "better": "n/a"
+    },
+    "M5 peak concurrent [cap 50]": {
+      "values": [
+        3.0,
+        3.0,
+        3.0,
+        3.0
+      ],
+      "spread": 0.0,
+      "better": "lower"
+    },
+    "M5 busiest-sat share [%]": {
+      "values": [
+        2.3404299641696524,
+        2.3914673777185236,
+        2.3404299641696524,
+        1.6075743688025996
+      ],
+      "spread": 0.783893008915924,
+      "better": "lower"
+    }
+  }
+}

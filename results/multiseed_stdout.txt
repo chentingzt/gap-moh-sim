@@ -1,0 +1,71 @@
+running seeds [0, 1, 2, 3, 4, 5, 6, 7, 8, 9] at M=100 H=3600 with 4 workers
+  seed 0: cached  (0 s)  elapsed 0 s
+  seed 1: ok  (6862 s)  elapsed 6862 s
+  seed 2: ok  (6832 s)  elapsed 6862 s
+  seed 3: ok  (6858 s)  elapsed 6862 s
+  seed 4: ok  (6893 s)  elapsed 6893 s
+  seed 5: ok  (6939 s)  elapsed 13772 s
+  seed 6: ok  (6939 s)  elapsed 13796 s
+  seed 7: ok  (6912 s)  elapsed 13796 s
+  seed 8: ok  (6849 s)  elapsed 13796 s
+  seed 9: ok  (3898 s)  elapsed 17640 s
+
+====================================================================================================
+AGGREGATE over 10 seeds (t = 2.262)
+====================================================================================================
+
+M1 target elevation  [deg]
+scheme                  mean   ¡À95% CI
+RSS-Threshold          63.00      0.28
+Graph-Dijkstra         16.70      0.02
+CNN-LSTM-Predict       65.49      0.28
+MADRL-Std              23.91      0.05
+Grid-Only              68.56      0.41
+GAP-MOH                68.56      0.41
+
+M1 target SNR  [dB]
+scheme                  mean   ¡À95% CI
+RSS-Threshold          28.17      0.02
+Graph-Dijkstra         21.11      0.01
+CNN-LSTM-Predict       28.63      0.02
+MADRL-Std              22.97      0.01
+Grid-Only              28.75      0.02
+GAP-MOH                28.75      0.02
+
+M2 serving SNR (clear)  [dB]
+scheme                  mean   ¡À95% CI
+RSS-Threshold          26.22      0.01
+Graph-Dijkstra         25.87      0.01
+CNN-LSTM-Predict       26.90      0.01
+MADRL-Std              26.07      0.00
+Grid-Only              25.39      0.00
+GAP-MOH                25.38      0.00
+
+M2 A_rain  [%]
+scheme                  mean   ¡À95% CI
+RSS-Threshold         100.00      0.00
+Graph-Dijkstra         98.78      0.04
+CNN-LSTM-Predict      100.00      0.00
+MADRL-Std             100.00      0.00
+Grid-Only              94.20      0.01
+GAP-MOH                94.19      0.01
+
+M3 unnecessary (by elevation)  [%]
+scheme                  mean   ¡À95% CI
+RSS-Threshold         100.00      0.00
+Graph-Dijkstra        100.00      0.00
+CNN-LSTM-Predict      100.00      0.00
+MADRL-Std              95.35      0.26
+Grid-Only               0.00      0.00
+GAP-MOH                 0.00      0.00
+
+M4 frequency  [events/h]
+scheme                  mean   ¡À95% CI
+RSS-Threshold          23.09      0.05
+Graph-Dijkstra         12.00      0.00
+CNN-LSTM-Predict       21.20      0.04
+MADRL-Std              12.74      0.03
+Grid-Only              16.14      0.04
+GAP-MOH                16.14      0.04
+
+wrote results/multiseed\multiseed_summary.json

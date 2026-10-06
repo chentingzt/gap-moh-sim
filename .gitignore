@@ -1,0 +1,44 @@
+# ============================================================================
+# gapmoh_sim — files excluded from the released repository
+# ============================================================================
+
+# ---- Python bytecode & build artefacts -------------------------------------
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+.eggs/
+build/
+dist/
+
+# ---- Test / lint caches ----------------------------------------------------
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+coverage.xml
+htmlcov/
+
+# ---- Editors & OS ----------------------------------------------------------
+.vscode/
+.idea/
+*.swp
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ---- One-shot internal patch scripts (deliberately NOT published) ----------
+# `_patch_05.py` / `_patch_08.py` were single-use scripts that edited
+# `scripts/05_new_metrics.py` and `scripts/08_multiseed.py` *while a 10-seed
+# production run was in flight*. Their edits are already baked into those two
+# files, and the design rationale ([CHOICE] M5 concurrency metric, the
+# `--trace-sat` passthrough) is recorded in the authors' provenance record.
+#
+# They are left on disk for traceability but are not part of the released tree:
+# a reproducibility artefact should not ship a script whose whole purpose was to
+# mutate another script mid-run.
+_patch_05.py
+_patch_08.py
+
+# ---- Local run leftovers ---------------------------------------------------
+*.tmp

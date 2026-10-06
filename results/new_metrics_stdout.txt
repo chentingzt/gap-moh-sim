@@ -1,0 +1,85 @@
+================================================================================================
+NEW METRICS  (M1 target quality / M2 availability / M3 necessity / M4 frequency)
+  M=100 terminals   horizon=3600 s   seed=0   constellation=5040 sats
+================================================================================================
+
+RAIN REFERENCE (the manuscript gives a 12 dB fade but no rain rate)
+  rate that gives exactly 12.0 dB at the 15 deg mask : 7.64 mm/h
+  service-floor elevation at that rate (net SNR >= 10 dB)          : 16.67 deg
+  => the 12 dB margin and the 99.5% availability figure are mutually consistent
+     for a tropical-maritime rain rate; no contradiction found.
+
+building 100 pass tables...
+  done in 1121.8 s
+  passes per terminal: min 567  mean 670  max 853
+  RSS-Threshold         2296 handovers  (371.8 s)
+  Graph-Dijkstra        1200 handovers  (345.6 s)
+  CNN-LSTM-Predict      2115 handovers  (340.8 s)
+  MADRL-Std             1277 handovers  (329.9 s)
+  Grid-Only             1626 handovers  (347.8 s)
+  GAP-MOH               1626 handovers  (330.9 s)
+
+================================================================================================
+M1  TARGET QUALITY -- the link the handover delivers
+------------------------------------------------------------------------------------------------
+scheme              tgt elev mean  tgt elev p05  tgt SNR mean  tgt SNR min
+RSS-Threshold                63.5          30.8          28.2         22.8
+Graph-Dijkstra               16.7          15.2          21.1         20.6
+CNN-LSTM-Predict             65.9          54.7          28.7         27.0
+MADRL-Std                    24.0          21.2          23.0         22.3
+Grid-Only                    69.3          54.5          28.8         27.7
+GAP-MOH                      69.3          54.5          28.8         27.7
+
+M2  SERVICE AVAILABILITY -- fraction of time the link meets the requirement
+    (rain at 7.64 mm/h; service floor 16.67 deg)
+------------------------------------------------------------------------------------------------
+scheme               clear %    rain %  mean srv SNR  mean srv elev  min srv elev
+RSS-Threshold         100.00    100.00          26.2           45.7          22.4
+Graph-Dijkstra        100.00     98.78          25.9           42.8          15.3
+CNN-LSTM-Predict      100.00    100.00          26.9           51.2          24.1
+MADRL-Std             100.00    100.00          26.1           43.6          16.5
+Grid-Only             100.00     94.16          25.4           40.9          15.0
+GAP-MOH               100.00     94.16          25.4           40.9          15.0
+
+M3  UNNECESSARY HANDOVERS -- left a still-serviceable link behind
+------------------------------------------------------------------------------------------------
+scheme              by elev %   @60 s %  srv elev at t_init  budget median s
+RSS-Threshold           100.0       7.2                22.5             49.8
+Graph-Dijkstra          100.0     100.0                31.1             90.0
+CNN-LSTM-Predict        100.0     100.0                24.4             60.0
+MADRL-Std                95.0       7.8                21.0             41.6
+Grid-Only                 0.0       0.0                15.0              0.0
+GAP-MOH                   0.0       0.0                15.0              0.0
+
+M4  HANDOVER FREQUENCY -- serving-satellite changes per terminal-hour
+------------------------------------------------------------------------------------------------
+scheme               measured /h    CN 表 7 /h     ratio
+RSS-Threshold               23.0         12.0      1.91
+Graph-Dijkstra              12.0         10.8      1.11
+CNN-LSTM-Predict            21.1         10.4      2.03
+MADRL-Std                   12.8         10.0      1.28
+Grid-Only                   16.3          9.8      1.66
+GAP-MOH                     16.3          9.6      1.69
+
+================================================================================================
+M1 target elev mean        min    16.71  max    69.29  spread    52.58
+M2 A_rain                  min    94.16  max   100.00  spread     5.84
+M3 unnecessary by elev     min     0.00  max   100.00  spread   100.00
+M4 frequency               min    12.00  max    22.96  spread    10.96
+================================================================================================
+
+COMPARISON -- published Table 7 row vs measured (same column order)
+------------------------------------------------------------------------------------------------
+            RSS-Threshold   Graph-Dijkstra CNN-LSTM-Predict        MADRL-Std        Grid-Only          GAP-MOH
+success % (pub)             79.6             87.0             90.1             92.4             94.1             96.8
+  measured              100.0            100.0            100.0            100.0            100.0            100.0
+unnecess % (pub)             23.4             15.1             11.6              8.3              6.7              4.1
+  measured              100.0            100.0            100.0             95.0              0.0              0.0
+freq /h (pub)             12.0             10.8             10.4             10.0              9.8              9.6
+  measured               23.0             12.0             21.1             12.8             16.3             16.3
+mean SNR (pub)             14.2             16.8             17.2             17.9             18.3             19.1
+  measured               26.2             25.9             26.9             26.1             25.4             25.4
+------------------------------------------------------------------------------------------------
+
+wrote D:\论文\LEO卫星快速搜网\gapmoh_sim\results\new_metrics\new_metrics.json
+wall clock 3188.7 s

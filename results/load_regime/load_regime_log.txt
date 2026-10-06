@@ -1,0 +1,36 @@
+================================================================================================
+LOAD-REGIME PROBE -- at what M does the per-satellite cap C bind?
+  horizon=900 s  seed=0  cap C=50
+  box: 20+/-15 N, 110-150 E   arm=gapmoh (target=highest_elev)
+  NOTE: peak concurrent is a MAXIMUM, so h=900 s underestimates the h=3600 s value.
+================================================================================================
+
+--- deployment: uniform ---
+    built 700 pass tables in 4966 s
+    passes/terminal min 174 mean 205 max 267
+    M=100   peak=4    over_cap=0    top1=  1.22%  active_sat=260   cap_binds=no   (90 s)
+    M=200   peak=6    over_cap=0    top1=  1.22%  active_sat=339   cap_binds=no   (174 s)
+    M=400   peak=10   over_cap=0    top1=  0.97%  active_sat=380   cap_binds=no   (363 s)
+    M=700   peak=15   over_cap=0    top1=  0.90%  active_sat=406   cap_binds=no   (621 s)
+
+--- deployment: lane ---
+    built 300 pass tables in 1309 s
+    passes/terminal min 171 mean 189 max 216
+    M=50    peak=12   over_cap=0    top1=  5.83%  active_sat=70    cap_binds=no   (36 s)
+    M=100   peak=19   over_cap=0    top1=  5.10%  active_sat=92    cap_binds=no   (70 s)
+    M=200   peak=36   over_cap=0    top1=  4.44%  active_sat=104   cap_binds=no   (140 s)
+    M=300   peak=55   over_cap=5    top1=  4.63%  active_sat=107   cap_binds=YES  (210 s)
+
+================================================================================================
+VERDICT
+================================================================================================
+  lane     peak grows 12 -> 55 over M 50 -> 300
+           cap binds from M=300 (peak 55 > C=50), overflow 1359.3 terminal-seconds
+  uniform  peak grows 4 -> 15 over M 100 -> 700
+           cap does NOT bind within the sweep; linear extrapolation on the last segment puts it at M ~ 2800
+
+  A scenario is usable for the framework-vs-refinement decomposition
+  only where the cap BINDS: below that point every arm reports zero
+  overflow and the metric cannot separate them.
+
+wrote D:\论文\LEO卫星快速搜网\gapmoh_sim\results\load_regime\load_regime.json

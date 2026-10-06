@@ -1,0 +1,26 @@
+================================================================================================
+LOAD-REGIME PROBE -- at what M does the per-satellite cap C bind?
+  horizon=900 s  seed=0  cap C=50
+  box: 20+/-15 N, 110-150 E   arm=gapmoh (target=highest_elev)
+  NOTE: peak concurrent is a MAXIMUM, so h=900 s underestimates the h=3600 s value.
+================================================================================================
+
+--- deployment: lane ---
+    built 300 pass tables in 1188 s
+    passes/terminal min 173 mean 189 max 226
+    M=50    peak=8    over_cap=0    top1=  4.07%  active_sat=99    cap_binds=no   (36 s)
+    M=100   peak=15   over_cap=0    top1=  3.80%  active_sat=137   cap_binds=no   (69 s)
+    M=200   peak=25   over_cap=0    top1=  3.18%  active_sat=161   cap_binds=no   (137 s)
+    M=300   peak=32   over_cap=0    top1=  2.70%  active_sat=175   cap_binds=no   (205 s)
+
+================================================================================================
+VERDICT
+================================================================================================
+  lane     peak grows 8 -> 32 over M 50 -> 300
+           cap does NOT bind within the sweep; linear extrapolation on the last segment puts it at M ~ 557
+
+  A scenario is usable for the framework-vs-refinement decomposition
+  only where the cap BINDS: below that point every arm reports zero
+  overflow and the metric cannot separate them.
+
+wrote results/load_sigma/s2.0\load_regime.json

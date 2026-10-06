@@ -1,0 +1,408 @@
+{
+  "spec": {
+    "M": 300,
+    "horizon_s": 900.0,
+    "seed": 0,
+    "constellation": 5040
+  },
+  "rain": {
+    "implied_rate_mm_h": 7.644228019779442,
+    "service_floor_elev_deg": 16.667509547656717,
+    "rain_margin_db": 12.0,
+    "rain_availability_pct": 99.5
+  },
+  "service_floor": {
+    "implied_rain_rate_mm_h": 7.644228019779442,
+    "achieved_loss_db": 12.000000000000002,
+    "target_loss_db": 12.0,
+    "service_floor_elev_deg_implied_rate": 16.667509547656717,
+    "service_floor_elev_deg_at_cfg_rate": null
+  },
+  "per_scheme": {
+    "rss": {
+      "m1_target_quality": {
+        "n": 1981,
+        "target_snr_mean": 27.35474763061833,
+        "target_snr_p05": 23.06558916276971,
+        "target_snr_min": 22.763969226239666,
+        "target_elev_mean": 56.106483061621795,
+        "target_elev_p05": 24.269494941129206,
+        "target_elev_min": 23.00159674455163
+      },
+      "m2_availability": {
+        "a_clear": 1.0,
+        "serving_snr_mean": 25.907141435212996,
+        "serving_snr_p05": 22.896140899658203,
+        "serving_elev_mean_deg": 43.10972540099363,
+        "min_elev_deg": 22.43693857095943,
+        "a_rain": {
+          "7.644228019779442": 1.0
+        }
+      },
+      "m3_unnecessary": {
+        "n": 1981,
+        "budget_mean_s": 57.612221032833865,
+        "budget_median_s": 50.7044491678476,
+        "share_by_time": {
+          "30.0": 1.0,
+          "60.0": 0.23220595658758203,
+          "120.0": 0.001514386673397274
+        },
+        "share_by_elevation": 1.0,
+        "serving_elev_at_init_median_deg": 22.46507553077968
+      },
+      "m4_frequency_per_h": 26.413333333333334,
+      "n_terminal": 300,
+      "n_handover": 1981,
+      "label": "RSS-Threshold",
+      "timing_success_pct": 100.0,
+      "m5_concurrency": {
+        "n_traces_used": 300,
+        "capacity_per_sat": 50,
+        "peak_concurrent": 63,
+        "peak_over_capacity": 13,
+        "overflow_terminal_seconds": 894.3000000000001,
+        "top1_share": 0.026435951560937674,
+        "n_active_sat": 201,
+        "mean_load_active_sat": 1.492537313432836
+      }
+    },
+    "dijkstra": {
+      "m1_target_quality": {
+        "n": 822,
+        "target_snr_mean": 21.050281984615772,
+        "target_snr_p05": 20.663394307746987,
+        "target_snr_min": 20.619383223679037,
+        "target_elev_mean": 16.499741025071376,
+        "target_elev_p05": 15.150894948027897,
+        "target_elev_min": 15.001237090969692
+      },
+      "m2_availability": {
+        "a_clear": 1.0,
+        "serving_snr_mean": 25.804782811140733,
+        "serving_snr_p05": 21.54176035563151,
+        "serving_elev_mean_deg": 42.274266160117854,
+        "min_elev_deg": 15.452911587471638,
+        "a_rain": {
+          "7.644228019779442": 0.9838092063844759
+        }
+      },
+      "m3_unnecessary": {
+        "n": 822,
+        "budget_mean_s": 90.0,
+        "budget_median_s": 90.0,
+        "share_by_time": {
+          "30.0": 1.0,
+          "60.0": 1.0,
+          "120.0": 0.0
+        },
+        "share_by_elevation": 1.0,
+        "serving_elev_at_init_median_deg": 31.01979181486447
+      },
+      "m4_frequency_per_h": 10.96,
+      "n_terminal": 300,
+      "n_handover": 822,
+      "label": "Graph-Dijkstra",
+      "timing_success_pct": 100.0,
+      "m5_concurrency": {
+        "n_traces_used": 300,
+        "capacity_per_sat": 50,
+        "peak_concurrent": 58,
+        "peak_over_capacity": 8,
+        "overflow_terminal_seconds": 2140.9,
+        "top1_share": 0.0638617931340962,
+        "n_active_sat": 85,
+        "mean_load_active_sat": 3.5294117647058822
+      }
+    },
+    "cnnlstm": {
+      "m1_target_quality": {
+        "n": 1504,
+        "target_snr_mean": 28.60481052078191,
+        "target_snr_p05": 27.521771809768882,
+        "target_snr_min": 26.788219573311594,
+        "target_elev_mean": 65.18285013556499,
+        "target_elev_p05": 51.526715475677776,
+        "target_elev_min": 45.26701469509553
+      },
+      "m2_availability": {
+        "a_clear": 1.0,
+        "serving_snr_mean": 26.975804172887834,
+        "serving_snr_p05": 23.5044465192159,
+        "serving_elev_mean_deg": 51.61849767975271,
+        "min_elev_deg": 24.233970021621857,
+        "a_rain": {
+          "7.644228019779442": 1.0
+        }
+      },
+      "m3_unnecessary": {
+        "n": 1504,
+        "budget_mean_s": 60.0,
+        "budget_median_s": 60.0,
+        "share_by_time": {
+          "30.0": 1.0,
+          "60.0": 1.0,
+          "120.0": 0.0
+        },
+        "share_by_elevation": 1.0,
+        "serving_elev_at_init_median_deg": 24.434273372575745
+      },
+      "m4_frequency_per_h": 20.053333333333335,
+      "n_terminal": 300,
+      "n_handover": 1504,
+      "label": "CNN-LSTM-Predict",
+      "timing_success_pct": 100.0,
+      "m5_concurrency": {
+        "n_traces_used": 300,
+        "capacity_per_sat": 50,
+        "peak_concurrent": 55,
+        "peak_over_capacity": 5,
+        "overflow_terminal_seconds": 900.8000000000001,
+        "top1_share": 0.034123986223752914,
+        "n_active_sat": 114,
+        "mean_load_active_sat": 2.631578947368421
+      }
+    },
+    "madrl_std": {
+      "m1_target_quality": {
+        "n": 1045,
+        "target_snr_mean": 22.95825531819554,
+        "target_snr_p05": 22.36054560877076,
+        "target_snr_min": 22.26740885350192,
+        "target_elev_mean": 23.853155910571605,
+        "target_elev_p05": 21.36909916104759,
+        "target_elev_min": 21.001818831483085
+      },
+      "m2_availability": {
+        "a_clear": 1.0,
+        "serving_snr_mean": 26.0827560216842,
+        "serving_snr_p05": 22.845409393310547,
+        "serving_elev_mean_deg": 43.64972731030149,
+        "min_elev_deg": 16.706509521162374,
+        "a_rain": {
+          "7.644228019779442": 0.9999366737029218
+        }
+      },
+      "m3_unnecessary": {
+        "n": 1045,
+        "budget_mean_s": 140.64126845701742,
+        "budget_median_s": 42.02301683127871,
+        "share_by_time": {
+          "30.0": 1.0,
+          "60.0": 0.28708133971291866,
+          "120.0": 0.28708133971291866
+        },
+        "share_by_elevation": 0.8363636363636363,
+        "serving_elev_at_init_median_deg": 20.9999999998211
+      },
+      "m4_frequency_per_h": 13.933333333333334,
+      "n_terminal": 300,
+      "n_handover": 1045,
+      "label": "MADRL-Std",
+      "timing_success_pct": 100.0,
+      "m5_concurrency": {
+        "n_traces_used": 300,
+        "capacity_per_sat": 50,
+        "peak_concurrent": 59,
+        "peak_over_capacity": 9,
+        "overflow_terminal_seconds": 3740.1000000000004,
+        "top1_share": 0.06637892086064512,
+        "n_active_sat": 99,
+        "mean_load_active_sat": 3.0303030303030303
+      }
+    },
+    "grid_only": {
+      "m1_target_quality": {
+        "n": 1171,
+        "target_snr_mean": 28.64013054897193,
+        "target_snr_p05": 27.791071874795946,
+        "target_snr_min": 27.701028953890912,
+        "target_elev_mean": 66.52562978841758,
+        "target_elev_p05": 54.1828998264546,
+        "target_elev_min": 53.268290045947246
+      },
+      "m2_availability": {
+        "a_clear": 1.0,
+        "serving_snr_mean": 25.493650963853227,
+        "serving_snr_p05": 21.050983289082843,
+        "serving_elev_mean_deg": 41.88408787911896,
+        "min_elev_deg": 14.99180572150975,
+        "a_rain": {
+          "7.644228019779442": 0.9439551160982113
+        }
+      },
+      "m3_unnecessary": {
+        "n": 1171,
+        "budget_mean_s": 0.014499999999998181,
+        "budget_median_s": 0.014499999999998181,
+        "share_by_time": {
+          "30.0": 0.0,
+          "60.0": 0.0,
+          "120.0": 0.0
+        },
+        "share_by_elevation": 0.0,
+        "serving_elev_at_init_median_deg": 15.00181612882045
+      },
+      "m4_frequency_per_h": 15.613333333333333,
+      "n_terminal": 300,
+      "n_handover": 1171,
+      "label": "Grid-Only",
+      "timing_success_pct": 100.0,
+      "m5_concurrency": {
+        "n_traces_used": 300,
+        "capacity_per_sat": 50,
+        "peak_concurrent": 55,
+        "peak_over_capacity": 5,
+        "overflow_terminal_seconds": 1359.2,
+        "top1_share": 0.04628189460430322,
+        "n_active_sat": 107,
+        "mean_load_active_sat": 2.8037383177570097
+      }
+    },
+    "gapmoh": {
+      "m1_target_quality": {
+        "n": 1171,
+        "target_snr_mean": 28.64032242508802,
+        "target_snr_p05": 27.791545430973486,
+        "target_snr_min": 27.701502938425747,
+        "target_elev_mean": 66.52899943593478,
+        "target_elev_p05": 54.187785717391776,
+        "target_elev_min": 53.2730314145681
+      },
+      "m2_availability": {
+        "a_clear": 1.0,
+        "serving_snr_mean": 25.493345005515856,
+        "serving_snr_p05": 21.050600204467774,
+        "serving_elev_mean_deg": 41.88215220511183,
+        "min_elev_deg": 14.990683510045468,
+        "a_rain": {
+          "7.644228019779442": 0.9439166018590527
+        }
+      },
+      "m3_unnecessary": {
+        "n": 1171,
+        "budget_mean_s": 0.005199999999974374,
+        "budget_median_s": 0.005200000000002092,
+        "share_by_time": {
+          "30.0": 0.0,
+          "60.0": 0.0,
+          "120.0": 0.0
+        },
+        "share_by_elevation": 0.0,
+        "serving_elev_at_init_median_deg": 15.000651300506116
+      },
+      "m4_frequency_per_h": 15.613333333333333,
+      "n_terminal": 300,
+      "n_handover": 1171,
+      "label": "GAP-MOH",
+      "timing_success_pct": 100.0,
+      "m5_concurrency": {
+        "n_traces_used": 300,
+        "capacity_per_sat": 50,
+        "peak_concurrent": 55,
+        "peak_over_capacity": 5,
+        "overflow_terminal_seconds": 1359.3000000000002,
+        "top1_share": 0.04628115394585787,
+        "n_active_sat": 107,
+        "mean_load_active_sat": 2.8037383177570097
+      }
+    }
+  },
+  "spreads": {
+    "M1 target elev mean": {
+      "values": [
+        56.106483061621795,
+        16.499741025071376,
+        65.18285013556499,
+        23.853155910571605,
+        66.52562978841758,
+        66.52899943593478
+      ],
+      "spread": 50.029258410863406,
+      "min": 16.499741025071376,
+      "max": 66.52899943593478
+    },
+    "M2 A_rain": {
+      "values": [
+        100.0,
+        98.38092063844759,
+        100.0,
+        99.99366737029219,
+        94.39551160982113,
+        94.39166018590527
+      ],
+      "spread": 5.608339814094734,
+      "min": 94.39166018590527,
+      "max": 100.0
+    },
+    "M3 unnecessary by elev": {
+      "values": [
+        100.0,
+        100.0,
+        100.0,
+        83.63636363636363,
+        0.0,
+        0.0
+      ],
+      "spread": 100.0,
+      "min": 0.0,
+      "max": 100.0
+    },
+    "M4 frequency": {
+      "values": [
+        26.413333333333334,
+        10.96,
+        20.053333333333335,
+        13.933333333333334,
+        15.613333333333333,
+        15.613333333333333
+      ],
+      "spread": 15.453333333333333,
+      "min": 10.96,
+      "max": 26.413333333333334
+    }
+  },
+  "table7_published": {
+    "label": "CN 表 7",
+    "success_pct": [
+      79.6,
+      87.0,
+      90.1,
+      92.4,
+      94.1,
+      96.8
+    ],
+    "unnecessary_pct": [
+      23.4,
+      15.1,
+      11.6,
+      8.3,
+      6.7,
+      4.1
+    ],
+    "freq_per_h": [
+      12.0,
+      10.8,
+      10.4,
+      10.0,
+      9.8,
+      9.6
+    ],
+    "mean_snr_db": [
+      14.2,
+      16.8,
+      17.2,
+      17.9,
+      18.3,
+      19.1
+    ]
+  },
+  "report_order": [
+    "rss",
+    "dijkstra",
+    "cnnlstm",
+    "madrl_std",
+    "grid_only",
+    "gapmoh"
+  ]
+}

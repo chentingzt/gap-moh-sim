@@ -1,0 +1,57 @@
+==============================================================================
+MADRL-Standard training (numpy backend)
+  M=20  horizon=1800s  episode=150s  episodes=60  seeds=3
+  dt_exec=24.7 ms  lr=0.0001  replay=100000  update_every=10
+==============================================================================
+building constellation, pass tables and tracks (once)...
+world ready in 218.0 s
+--- scripted baselines (same world, same criterion) ---
+  baseline RANDOM (uniform over 7 actions)  success=100.00%  handovers/ep=25703.3  lost/ep=   0.0
+D:\论文\LEO卫星快速搜网\gapmoh_sim\scripts\02_train_small.py:176: RuntimeWarning: Mean of empty slice
+  out[name] = {"success_pct_mean": float(np.nanmean(succ)),
+  baseline HOLD always (never hand over)    success=   nan%  handovers/ep=    0.0  lost/ep=   0.0
+  baseline MAX-REMAINING every step         success=100.00%  handovers/ep=29979.0  lost/ep=   0.0
+
+--- seed 0 ---
+  seed 0 ep    6/60  eps=0.921  succ=100.00%  ho=26115  lost=  0  R= 2620.15
+  seed 0 ep   12/60  eps=0.826  succ=100.00%  ho=26382  lost=  0  R= 2634.59
+  seed 0 ep   18/60  eps=0.731  succ=100.00%  ho=26786  lost=  0  R= 2657.17
+  seed 0 ep   24/60  eps=0.636  succ=100.00%  ho=27211  lost=  0  R= 2680.14
+  seed 0 ep   30/60  eps=0.541  succ=100.00%  ho=27672  lost=  0  R= 2703.42
+  seed 0 ep   36/60  eps=0.446  succ=100.00%  ho=27943  lost=  0  R= 2708.56
+  seed 0 ep   42/60  eps=0.351  succ=100.00%  ho=28467  lost=  0  R= 2733.88
+  seed 0 ep   48/60  eps=0.256  succ=100.00%  ho=28937  lost=  0  R= 2757.14
+  seed 0 ep   54/60  eps=0.161  succ=100.00%  ho=29308  lost=  0  R= 2775.59
+  seed 0 ep   60/60  eps=0.066  succ=100.00%  ho=29688  lost=  0  R= 2795.71
+  seed 0 done in 660.8 s  final moving-avg succ = 100.00%
+--- seed 1 ---
+  seed 1 ep    6/60  eps=0.921  succ=100.00%  ho=25437  lost=  0  R= 2585.36
+  seed 1 ep   12/60  eps=0.826  succ=100.00%  ho=25711  lost=  0  R= 2597.82
+  seed 1 ep   18/60  eps=0.731  succ=100.00%  ho=26834  lost=  0  R= 2652.01
+  seed 1 ep   24/60  eps=0.636  succ=100.00%  ho=25704  lost=  0  R= 2596.73
+  seed 1 ep   30/60  eps=0.541  succ=100.00%  ho=27714  lost=  0  R= 2698.25
+  seed 1 ep   36/60  eps=0.446  succ=100.00%  ho=27970  lost=  0  R= 2714.55
+  seed 1 ep   42/60  eps=0.351  succ=100.00%  ho=26744  lost=  0  R= 2657.40
+  seed 1 ep   48/60  eps=0.256  succ=100.00%  ho=28874  lost=  0  R= 2751.68
+  seed 1 ep   54/60  eps=0.161  succ=100.00%  ho=29247  lost=  0  R= 2786.83
+  seed 1 ep   60/60  eps=0.066  succ=100.00%  ho=29732  lost=  0  R= 2817.48
+  seed 1 done in 645.3 s  final moving-avg succ = 100.00%
+--- seed 2 ---
+  seed 2 ep    6/60  eps=0.921  succ=100.00%  ho=25969  lost=  0  R= 2613.37
+  seed 2 ep   12/60  eps=0.826  succ=100.00%  ho=26449  lost=  0  R= 2639.61
+  seed 2 ep   18/60  eps=0.731  succ=100.00%  ho=26808  lost=  0  R= 2658.87
+  seed 2 ep   24/60  eps=0.636  succ=100.00%  ho=26614  lost=  0  R= 2643.22
+  seed 2 ep   30/60  eps=0.541  succ=100.00%  ho=27497  lost=  0  R= 2684.27
+  seed 2 ep   36/60  eps=0.446  succ=100.00%  ho=27097  lost=  0  R= 2668.58
+  seed 2 ep   42/60  eps=0.351  succ=100.00%  ho=28495  lost=  0  R= 2744.81
+  seed 2 ep   48/60  eps=0.256  succ=100.00%  ho=28820  lost=  0  R= 2765.82
+  seed 2 ep   54/60  eps=0.161  succ=100.00%  ho=28521  lost=  0  R= 2740.95
+  seed 2 ep   60/60  eps=0.066  succ=100.00%  ho=29712  lost=  0  R= 2797.42
+  seed 2 done in 696.2 s  final moving-avg succ = 100.00%
+==============================================================================
+FINAL: 3-seed mean moving-average success rate = 100.00% +/- 0.00%
+       per-seed: ['100.00', '100.00', '100.00']
+       manuscript reports 92.4% +/- 0.6% for this scheme
+==============================================================================
+wrote D:\论文\LEO卫星快速搜网\gapmoh_sim\results\madrl_standard\training_curves.json
+wrote D:\论文\LEO卫星快速搜网\gapmoh_sim\results\madrl_standard\training_curves.png

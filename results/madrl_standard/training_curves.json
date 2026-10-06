@@ -1,0 +1,1915 @@
+{
+  "scheme": "MADRL-Standard",
+  "baselines": {
+    "RANDOM (uniform over 7 actions)": {
+      "success_pct_mean": 100.0,
+      "handovers_mean": 25703.333333333332,
+      "lost_mean": 0.0
+    },
+    "HOLD always (never hand over)": {
+      "success_pct_mean": NaN,
+      "handovers_mean": 0.0,
+      "lost_mean": 0.0
+    },
+    "MAX-REMAINING every step": {
+      "success_pct_mean": 100.0,
+      "handovers_mean": 29979.0,
+      "lost_mean": 0.0
+    }
+  },
+  "spec": {
+    "M": 20,
+    "horizon_s": 1800.0,
+    "episode_steps": 1500,
+    "episodes": 60,
+    "seeds": 3,
+    "dt_exec_ms": 24.7,
+    "lr": 0.0001,
+    "replay": 100000,
+    "update_every": 10,
+    "backend": "numpy"
+  },
+  "per_seed_final_moving_avg_success_pct": [
+    100.00000000000006,
+    100.00000000000006,
+    100.00000000000006
+  ],
+  "mean_final_moving_avg_success_pct": 100.00000000000006,
+  "sd_final_moving_avg_success_pct": 0.0,
+  "mean_curve_pct": [
+    100.0,
+    100.0,
+    100.0,
+    100.0,
+    100.0,
+    100.0,
+    100.0,
+    100.0,
+    100.0,
+    100.0,
+    100.0,
+    100.0,
+    100.0,
+    100.0,
+    100.0,
+    100.0,
+    100.0,
+    100.0,
+    100.0,
+    100.0,
+    100.0,
+    100.0,
+    100.0,
+    100.0,
+    100.0,
+    100.0,
+    100.0,
+    100.0,
+    100.0,
+    100.0,
+    100.0,
+    100.0,
+    100.0,
+    100.0,
+    100.0,
+    100.0,
+    100.0,
+    100.0,
+    100.0,
+    100.0,
+    100.0,
+    100.0,
+    100.0,
+    100.0,
+    100.0,
+    100.0,
+    100.0,
+    100.0,
+    100.0,
+    100.0,
+    100.0,
+    100.0,
+    100.0,
+    100.0,
+    100.0,
+    100.0,
+    100.0,
+    100.0,
+    100.0,
+    100.0
+  ],
+  "sd_curve_pct": [
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0
+  ],
+  "mean_reward_curve": [
+    2594.2508571619305,
+    2603.9916886479173,
+    2601.196759553769,
+    2609.031068313551,
+    2593.3443824921815,
+    2606.2919603589457,
+    2621.2691976067913,
+    2621.792783405135,
+    2608.6619018741553,
+    2621.50395603434,
+    2632.2076754753466,
+    2624.0091061642247,
+    2642.16996602001,
+    2638.779283946949,
+    2623.629653772174,
+    2641.263474536283,
+    2649.4268903764532,
+    2656.016951822567,
+    2641.4336274009815,
+    2643.0686817094497,
+    2644.4093710384896,
+    2655.8551559561542,
+    2663.70394056019,
+    2640.0309530581444,
+    2676.3828383431605,
+    2678.820857404486,
+    2650.6872249265866,
+    2680.668680154276,
+    2682.6235469048015,
+    2695.3153185174438,
+    2681.8866802918824,
+    2684.9006239721566,
+    2696.3593955466617,
+    2702.502984523262,
+    2713.4918044650385,
+    2697.2308488215463,
+    2712.4271090873003,
+    2712.5595250344236,
+    2723.1869643130412,
+    2721.0948698022435,
+    2710.0440177781506,
+    2712.0276027176865,
+    2743.6508027959194,
+    2748.4178679938946,
+    2748.6736475951525,
+    2747.855202163237,
+    2750.900821498,
+    2758.2129018071755,
+    2762.1869998709753,
+    2764.8459435840728,
+    2771.444717840713,
+    2773.9807694618285,
+    2776.9917052565347,
+    2767.788179225458,
+    2782.8665672211223,
+    2783.9192201662513,
+    2780.9790770784493,
+    2794.6909983424084,
+    2798.978538462119,
+    2803.5388428174574
+  ],
+  "episodes": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29,
+    30,
+    31,
+    32,
+    33,
+    34,
+    35,
+    36,
+    37,
+    38,
+    39,
+    40,
+    41,
+    42,
+    43,
+    44,
+    45,
+    46,
+    47,
+    48,
+    49,
+    50,
+    51,
+    52,
+    53,
+    54,
+    55,
+    56,
+    57,
+    58,
+    59
+  ],
+  "per_seed": {
+    "0": [
+      {
+        "episode": 0,
+        "epsilon": 1.0,
+        "success_pct": 100.0,
+        "reward_per_terminal": 2594.687469734468,
+        "handovers": 25622,
+        "lost": 0,
+        "td_loss": 3.424819320653335
+      },
+      {
+        "episode": 1,
+        "epsilon": 0.9841666666666666,
+        "success_pct": 100.0,
+        "reward_per_terminal": 2605.138114115465,
+        "handovers": 25824,
+        "lost": 0,
+        "td_loss": 0.9063458428188721
+      },
+      {
+        "episode": 2,
+        "epsilon": 0.9683333333333334,
+        "success_pct": 100.0,
+        "reward_per_terminal": 2608.8162460583317,
+        "handovers": 25887,
+        "lost": 0,
+        "td_loss": 1.1786382506044033
+      },
+      {
+        "episode": 3,
+        "epsilon": 0.9525,
+        "success_pct": 100.0,
+        "reward_per_terminal": 2610.0563909468083,
+        "handovers": 25919,
+        "lost": 0,
+        "td_loss": 1.1123385504202512
+      },
+      {
+        "episode": 4,
+        "epsilon": 0.9366666666666666,
+        "success_pct": 100.0,
+        "reward_per_terminal": 2612.931642251324,
+        "handovers": 25976,
+        "lost": 0,
+        "td_loss": 1.0105047007576289
+      },
+      {
+        "episode": 5,
+        "epsilon": 0.9208333333333334,
+        "success_pct": 100.0,
+        "reward_per_terminal": 2620.1496150024977,
+        "handovers": 26115,
+        "lost": 0,
+        "td_loss": 0.9385448110893212
+      },
+      {
+        "episode": 6,
+        "epsilon": 0.905,
+        "success_pct": 100.0,
+        "reward_per_terminal": 2625.084008156152,
+        "handovers": 26211,
+        "lost": 0,
+        "td_loss": 0.9092652738243654
+      },
+      {
+        "episode": 7,
+        "epsilon": 0.8891666666666667,
+        "success_pct": 100.0,
+        "reward_per_terminal": 2624.234202874247,
+        "handovers": 26182,
+        "lost": 0,
+        "td_loss": 0.8121271085121191
+      },
+      {
+        "episode": 8,
+        "epsilon": 0.8733333333333333,
+        "success_pct": 100.0,
+        "reward_per_terminal": 2626.6641782763645,
+        "handovers": 26220,
+        "lost": 0,
+        "td_loss": 0.8975742359839042
+      },
+      {
+        "episode": 9,
+        "epsilon": 0.8575,
+        "success_pct": 100.0,
+        "reward_per_terminal": 2627.378564155375,
+        "handovers": 26235,
+        "lost": 0,
+        "td_loss": 0.6913226543485119
+      },
+      {
+        "episode": 10,
+        "epsilon": 0.8416666666666667,
+        "success_pct": 100.0,
+        "reward_per_terminal": 2636.0091332005004,
+        "handovers": 26415,
+        "lost": 0,
+        "td_loss": 0.7727191864756077
+      },
+      {
+        "episode": 11,
+        "epsilon": 0.8258333333333334,
+        "success_pct": 100.0,
+        "reward_per_terminal": 2634.59405452761,
+        "handovers": 26382,
+        "lost": 0,
+        "td_loss": 0.9072070796464644
+      },
+      {
+        "episode": 12,
+        "epsilon": 0.81,
+        "success_pct": 100.0,
+        "reward_per_terminal": 2646.602612177673,
+        "handovers": 26615,
+        "lost": 0,
+        "td_loss": 0.8377364076675319
+      },
+      {
+        "episode": 13,
+        "epsilon": 0.7941666666666667,
+        "success_pct": 100.0,
+        "reward_per_terminal": 2647.1463766926936,
+        "handovers": 26627,
+        "lost": 0,
+        "td_loss": 0.9161793090324625
+      },
+      {
+        "episode": 14,
+        "epsilon": 0.7783333333333333,
+        "success_pct": 100.0,
+        "reward_per_terminal": 2647.188813046493,
+        "handovers": 26627,
+        "lost": 0,
+        "td_loss": 0.9450710855006647
+      },
+      {
+        "episode": 15,
+        "epsilon": 0.7625,
+        "success_pct": 100.0,
+        "reward_per_terminal": 2654.893457477812,
+        "handovers": 26777,
+        "lost": 0,
+        "td_loss": 0.9909278684342303
+      },
+      {
+        "episode": 16,
+        "epsilon": 0.7466666666666667,
+        "success_pct": 100.0,
+        "reward_per_terminal": 2658.661185759517,
+        "handovers": 26837,
+        "lost": 0,
+        "td_loss": 1.224181653823056
+      },
+      {
+        "episode": 17,
+        "epsilon": 0.7308333333333333,
+        "success_pct": 100.0,
+        "reward_per_terminal": 2657.1707045605654,
+        "handovers": 26786,
+        "lost": 0,
+        "td_loss": 1.0608182348532225
+      },
+      {
+        "episode": 18,
+        "epsilon": 0.7150000000000001,
+        "success_pct": 100.0,
+        "reward_per_terminal": 2664.2839153811096,
+        "handovers": 26929,
+        "lost": 0,
+        "td_loss": 1.4525049576069717
+      },
+      {
+        "episode": 19,
+        "epsilon": 0.6991666666666667,
+        "success_pct": 100.0,
+        "reward_per_terminal": 2670.0996755092415,
+        "handovers": 27057,
+        "lost": 0,
+        "td_loss": 1.551341996104292
+      },
+      {
+        "episode": 20,
+        "epsilon": 0.6833333333333333,
+        "success_pct": 100.0,
+        "reward_per_terminal": 2667.1573474138304,
+        "handovers": 26966,
+        "lost": 0,
+        "td_loss": 1.2470902255719565
+      },
+      {
+        "episode": 21,
+        "epsilon": 0.6675,
+        "success_pct": 100.0,
+        "reward_per_terminal": 2675.2048811862223,
+        "handovers": 27121,
+        "lost": 0,
+        "td_loss": 1.3913460342743122
+      },
+      {
+        "episode": 22,
+        "epsilon": 0.6516666666666667,
+        "success_pct": 100.0,
+        "reward_per_terminal": 2677.1408624355395,
+        "handovers": 27180,
+        "lost": 0,
+        "td_loss": 1.593196981373597
+      },
+      {
+        "episode": 23,
+        "epsilon": 0.6358333333333333,
+        "success_pct": 100.0,
+        "reward_per_terminal": 2680.144451989395,
+        "handovers": 27211,
+        "lost": 0,
+        "td_loss": 1.5970747648425851
+      },
+      {
+        "episode": 24,
+        "epsilon": 0.62,
+        "success_pct": 100.0,
+        "reward_per_terminal": 2682.7469949891965,
+        "handovers": 27273,
+        "lost": 0,
+        "td_loss": 1.6358918095102701
+      },
+      {
+        "episode": 25,
+        "epsilon": 0.6041666666666667,
+        "success_pct": 100.0,
+        "reward_per_terminal": 2687.417980400497,
+        "handovers": 27347,
+        "lost": 0,
+        "td_loss": 1.938021178791434
+      },
+      {
+        "episode": 26,
+        "epsilon": 0.5883333333333334,
+        "success_pct": 100.0,
+        "reward_per_terminal": 2693.4071469469804,
+        "handovers": 27479,
+        "lost": 0,
+        "td_loss": 1.9305925634305607
+      },
+      {
+        "episode": 27,
+        "epsilon": 0.5725,
+        "success_pct": 100.0,
+        "reward_per_terminal": 2682.882823412495,
+        "handovers": 27262,
+        "lost": 0,
+        "td_loss": 2.59144885344022
+      },
+      {
+        "episode": 28,
+        "epsilon": 0.5566666666666666,
+        "success_pct": 100.0,
+        "reward_per_terminal": 2696.6463506634027,
+        "handovers": 27503,
+        "lost": 0,
+        "td_loss": 2.15427251946708
+      },
+      {
+        "episode": 29,
+        "epsilon": 0.5408333333333333,
+        "success_pct": 100.0,
+        "reward_per_terminal": 2703.4242869587483,
+        "handovers": 27672,
+        "lost": 0,
+        "td_loss": 1.7235623595338851
+      },
+      {
+        "episode": 30,
+        "epsilon": 0.525,
+        "success_pct": 100.0,
+        "reward_per_terminal": 2668.5571448198034,
+        "handovers": 26979,
+        "lost": 0,
+        "td_loss": 3.343332648738391
+      },
+      {
+        "episode": 31,
+        "epsilon": 0.5091666666666667,
+        "success_pct": 100.0,
+        "reward_per_terminal": 2710.592182769817,
+        "handovers": 27776,
+        "lost": 0,
+        "td_loss": 2.435876108177281
+      },
+      {
+        "episode": 32,
+        "epsilon": 0.4933333333333334,
+        "success_pct": 100.0,
+        "reward_per_terminal": 2688.8469868925267,
+        "handovers": 27408,
+        "lost": 0,
+        "td_loss": 3.28714251544181
+      },
+      {
+        "episode": 33,
+        "epsilon": 0.47750000000000004,
+        "success_pct": 100.0,
+        "reward_per_terminal": 2710.6004737168687,
+        "handovers": 27884,
+        "lost": 0,
+        "td_loss": 3.0000107064581654
+      },
+      {
+        "episode": 34,
+        "epsilon": 0.46166666666666667,
+        "success_pct": 100.0,
+        "reward_per_terminal": 2719.0637287261256,
+        "handovers": 28030,
+        "lost": 0,
+        "td_loss": 2.546975708902946
+      },
+      {
+        "episode": 35,
+        "epsilon": 0.4458333333333333,
+        "success_pct": 100.0,
+        "reward_per_terminal": 2708.5630774573865,
+        "handovers": 27943,
+        "lost": 0,
+        "td_loss": 3.2526551508472155
+      },
+      {
+        "episode": 36,
+        "epsilon": 0.43000000000000005,
+        "success_pct": 100.0,
+        "reward_per_terminal": 2724.2555231575398,
+        "handovers": 28142,
+        "lost": 0,
+        "td_loss": 3.64902303426219
+      },
+      {
+        "episode": 37,
+        "epsilon": 0.4141666666666667,
+        "success_pct": 100.0,
+        "reward_per_terminal": 2720.692736161494,
+        "handovers": 28210,
+        "lost": 0,
+        "td_loss": 2.607913995659739
+      },
+      {
+        "episode": 38,
+        "epsilon": 0.39833333333333343,
+        "success_pct": 100.0,
+        "reward_per_terminal": 2719.96406363189,
+        "handovers": 28151,
+        "lost": 0,
+        "td_loss": 3.5508013618519416
+      },
+      {
+        "episode": 39,
+        "epsilon": 0.38250000000000006,
+        "success_pct": 100.0,
+        "reward_per_terminal": 2729.304149684157,
+        "handovers": 28330,
+        "lost": 0,
+        "td_loss": 4.265641941047022
+      },
+      {
+        "episode": 40,
+        "epsilon": 0.3666666666666667,
+        "success_pct": 100.0,
+        "reward_per_terminal": 2714.8488355355507,
+        "handovers": 28057,
+        "lost": 0,
+        "td_loss": 5.212733358853161
+      },
+      {
+        "episode": 41,
+        "epsilon": 0.35083333333333333,
+        "success_pct": 100.0,
+        "reward_per_terminal": 2733.8799795356213,
+        "handovers": 28467,
+        "lost": 0,
+        "td_loss": 3.836226861065311
+      },
+      {
+        "episode": 42,
+        "epsilon": 0.3350000000000001,
+        "success_pct": 100.0,
+        "reward_per_terminal": 2737.9726165224165,
+        "handovers": 28529,
+        "lost": 0,
+        "td_loss": 4.630975861593007
+      },
+      {
+        "episode": 43,
+        "epsilon": 0.3191666666666667,
+        "success_pct": 100.0,
+        "reward_per_terminal": 2743.0788210438905,
+        "handovers": 28631,
+        "lost": 0,
+        "td_loss": 5.148779544545761
+      },
+      {
+        "episode": 44,
+        "epsilon": 0.30333333333333345,
+        "success_pct": 100.0,
+        "reward_per_terminal": 2745.384222296505,
+        "handovers": 28678,
+        "lost": 0,
+        "td_loss": 5.813282203795989
+      },
+      {
+        "episode": 45,
+        "epsilon": 0.2875000000000001,
+        "success_pct": 100.0,
+        "reward_per_terminal": 2745.2989914537975,
+        "handovers": 28673,
+        "lost": 0,
+        "td_loss": 5.125900474563006
+      },
+      {
+        "episode": 46,
+        "epsilon": 0.2716666666666666,
+        "success_pct": 100.0,
+        "reward_per_terminal": 2751.346246781116,
+        "handovers": 28802,
+        "lost": 0,
+        "td_loss": 5.081172166192131
+      },
+      {
+        "episode": 47,
+        "epsilon": 0.25583333333333336,
+        "success_pct": 100.0,
+        "reward_per_terminal": 2757.138587009998,
+        "handovers": 28937,
+        "lost": 0,
+        "td_loss": 5.458813644183778
+      },
+      {
+        "episode": 48,
+        "epsilon": 0.24,
+        "success_pct": 100.0,
+        "reward_per_terminal": 2758.254496611525,
+        "handovers": 28960,
+        "lost": 0,
+        "td_loss": 4.424728129267722
+      },
+      {
+        "episode": 49,
+        "epsilon": 0.22416666666666674,
+        "success_pct": 100.0,
+        "reward_per_terminal": 2762.9339179828125,
+        "handovers": 29025,
+        "lost": 0,
+        "td_loss": 6.1907530905809995
+      },
+      {
+        "episode": 50,
+        "epsilon": 0.20833333333333337,
+        "success_pct": 100.0,
+        "reward_per_terminal": 2767.40183930149,
+        "handovers": 29131,
+        "lost": 0,
+        "td_loss": 4.4712338420180915
+      },
+      {
+        "episode": 51,
+        "epsilon": 0.1925,
+        "success_pct": 100.0,
+        "reward_per_terminal": 2768.514978908583,
+        "handovers": 29158,
+        "lost": 0,
+        "td_loss": 5.684992012266651
+      },
+      {
+        "episode": 52,
+        "epsilon": 0.17666666666666664,
+        "success_pct": 100.0,
+        "reward_per_terminal": 2770.341417009201,
+        "handovers": 29193,
+        "lost": 0,
+        "td_loss": 5.39810368515565
+      },
+      {
+        "episode": 53,
+        "epsilon": 0.16083333333333338,
+        "success_pct": 100.0,
+        "reward_per_terminal": 2775.594233830173,
+        "handovers": 29308,
+        "lost": 0,
+        "td_loss": 5.757150228214465
+      },
+      {
+        "episode": 54,
+        "epsilon": 0.14500000000000002,
+        "success_pct": 100.0,
+        "reward_per_terminal": 2780.408612852402,
+        "handovers": 29391,
+        "lost": 0,
+        "td_loss": 4.731719912043906
+      },
+      {
+        "episode": 55,
+        "epsilon": 0.12916666666666676,
+        "success_pct": 100.0,
+        "reward_per_terminal": 2783.708083696002,
+        "handovers": 29457,
+        "lost": 0,
+        "td_loss": 4.1123443474628285
+      },
+      {
+        "episode": 56,
+        "epsilon": 0.1133333333333334,
+        "success_pct": 100.0,
+        "reward_per_terminal": 2786.3548717125477,
+        "handovers": 29497,
+        "lost": 0,
+        "td_loss": 8.161143348845762
+      },
+      {
+        "episode": 57,
+        "epsilon": 0.09750000000000003,
+        "success_pct": 100.0,
+        "reward_per_terminal": 2789.4613367536094,
+        "handovers": 29576,
+        "lost": 0,
+        "td_loss": 5.833088484096451
+      },
+      {
+        "episode": 58,
+        "epsilon": 0.08166666666666667,
+        "success_pct": 100.0,
+        "reward_per_terminal": 2792.678148401363,
+        "handovers": 29628,
+        "lost": 0,
+        "td_loss": 7.008385818932664
+      },
+      {
+        "episode": 59,
+        "epsilon": 0.06583333333333341,
+        "success_pct": 100.0,
+        "reward_per_terminal": 2795.70942013953,
+        "handovers": 29688,
+        "lost": 0,
+        "td_loss": 6.646609529962202
+      }
+    ],
+    "1": [
+      {
+        "episode": 0,
+        "epsilon": 1.0,
+        "success_pct": 100.0,
+        "reward_per_terminal": 2593.5594514237064,
+        "handovers": 25597,
+        "lost": 0,
+        "td_loss": 1.650907881080033
+      },
+      {
+        "episode": 1,
+        "epsilon": 0.9841666666666666,
+        "success_pct": 100.0,
+        "reward_per_terminal": 2601.8522468509827,
+        "handovers": 25763,
+        "lost": 0,
+        "td_loss": 0.5426160582190256
+      },
+      {
+        "episode": 2,
+        "epsilon": 0.9683333333333334,
+        "success_pct": 100.0,
+        "reward_per_terminal": 2591.3066843349466,
+        "handovers": 25551,
+        "lost": 0,
+        "td_loss": 0.6656105167157698
+      },
+      {
+        "episode": 3,
+        "epsilon": 0.9525,
+        "success_pct": 100.0,
+        "reward_per_terminal": 2607.0076086923646,
+        "handovers": 25876,
+        "lost": 0,
+        "td_loss": 0.618463597968825
+      },
+      {
+        "episode": 4,
+        "epsilon": 0.9366666666666666,
+        "success_pct": 100.0,
+        "reward_per_terminal": 2555.7157781327714,
+        "handovers": 24836,
+        "lost": 0,
+        "td_loss": 0.5988789784813385
+      },
+      {
+        "episode": 5,
+        "epsilon": 0.9208333333333334,
+        "success_pct": 100.0,
+        "reward_per_terminal": 2585.355795069608,
+        "handovers": 25437,
+        "lost": 0,
+        "td_loss": 0.5639423282226181
+      },
+      {
+        "episode": 6,
+        "epsilon": 0.905,
+        "success_pct": 100.0,
+        "reward_per_terminal": 2618.1877082111773,
+        "handovers": 26110,
+        "lost": 0,
+        "td_loss": 0.5533353837719039
+      },
+      {
+        "episode": 7,
+        "epsilon": 0.8891666666666667,
+        "success_pct": 100.0,
+        "reward_per_terminal": 2620.111515429254,
+        "handovers": 26152,
+        "lost": 0,
+        "td_loss": 0.5984287053662721
+      },
+      {
+        "episode": 8,
+        "epsilon": 0.8733333333333333,
+        "success_pct": 100.0,
+        "reward_per_terminal": 2575.978230253593,
+        "handovers": 25256,
+        "lost": 0,
+        "td_loss": 0.5410333678981261
+      },
+      {
+        "episode": 9,
+        "epsilon": 0.8575,
+        "success_pct": 100.0,
+        "reward_per_terminal": 2607.8659648181447,
+        "handovers": 25908,
+        "lost": 0,
+        "td_loss": 0.5846231318140859
+      },
+      {
+        "episode": 10,
+        "epsilon": 0.8416666666666667,
+        "success_pct": 100.0,
+        "reward_per_terminal": 2625.0218208129636,
+        "handovers": 26261,
+        "lost": 0,
+        "td_loss": 0.6379283159297641
+      },
+      {
+        "episode": 11,
+        "epsilon": 0.8258333333333334,
+        "success_pct": 100.0,
+        "reward_per_terminal": 2597.821217795162,
+        "handovers": 25711,
+        "lost": 0,
+        "td_loss": 0.641192054995996
+      },
+      {
+        "episode": 12,
+        "epsilon": 0.81,
+        "success_pct": 100.0,
+        "reward_per_terminal": 2637.830532167285,
+        "handovers": 26530,
+        "lost": 0,
+        "td_loss": 0.692576950504252
+      },
+      {
+        "episode": 13,
+        "epsilon": 0.7941666666666667,
+        "success_pct": 100.0,
+        "reward_per_terminal": 2626.399903054205,
+        "handovers": 26297,
+        "lost": 0,
+        "td_loss": 0.7739669465682277
+      },
+      {
+        "episode": 14,
+        "epsilon": 0.7783333333333333,
+        "success_pct": 100.0,
+        "reward_per_terminal": 2573.5511387981783,
+        "handovers": 25218,
+        "lost": 0,
+        "td_loss": 0.8499979604044823
+      },
+      {
+        "episode": 15,
+        "epsilon": 0.7625,
+        "success_pct": 100.0,
+        "reward_per_terminal": 2629.44564288867,
+        "handovers": 26364,
+        "lost": 0,
+        "td_loss": 0.9522815879925762
+      },
+      {
+        "episode": 16,
+        "epsilon": 0.7466666666666667,
+        "success_pct": 100.0,
+        "reward_per_terminal": 2635.612889888549,
+        "handovers": 26487,
+        "lost": 0,
+        "td_loss": 1.0280353684159576
+      },
+      {
+        "episode": 17,
+        "epsilon": 0.7308333333333333,
+        "success_pct": 100.0,
+        "reward_per_terminal": 2652.007532003404,
+        "handovers": 26834,
+        "lost": 0,
+        "td_loss": 0.9862435117628381
+      },
+      {
+        "episode": 18,
+        "epsilon": 0.7150000000000001,
+        "success_pct": 100.0,
+        "reward_per_terminal": 2632.716334165803,
+        "handovers": 26439,
+        "lost": 0,
+        "td_loss": 1.1727000151958142
+      },
+      {
+        "episode": 19,
+        "epsilon": 0.6991666666666667,
+        "success_pct": 100.0,
+        "reward_per_terminal": 2620.82236463766,
+        "handovers": 26196,
+        "lost": 0,
+        "td_loss": 1.4359804033715842
+      },
+      {
+        "episode": 20,
+        "epsilon": 0.6833333333333333,
+        "success_pct": 100.0,
+        "reward_per_terminal": 2634.2496923545814,
+        "handovers": 26463,
+        "lost": 0,
+        "td_loss": 1.409117189658667
+      },
+      {
+        "episode": 21,
+        "epsilon": 0.6675,
+        "success_pct": 100.0,
+        "reward_per_terminal": 2628.728613063138,
+        "handovers": 26349,
+        "lost": 0,
+        "td_loss": 1.407383907196041
+      },
+      {
+        "episode": 22,
+        "epsilon": 0.6516666666666667,
+        "success_pct": 100.0,
+        "reward_per_terminal": 2665.413916216951,
+        "handovers": 27112,
+        "lost": 0,
+        "td_loss": 1.1240426547859326
+      },
+      {
+        "episode": 23,
+        "epsilon": 0.6358333333333333,
+        "success_pct": 100.0,
+        "reward_per_terminal": 2596.7278282990615,
+        "handovers": 25704,
+        "lost": 0,
+        "td_loss": 1.607855462132537
+      },
+      {
+        "episode": 24,
+        "epsilon": 0.62,
+        "success_pct": 100.0,
+        "reward_per_terminal": 2669.863163145805,
+        "handovers": 27190,
+        "lost": 0,
+        "td_loss": 1.9141423661482841
+      },
+      {
+        "episode": 25,
+        "epsilon": 0.6041666666666667,
+        "success_pct": 100.0,
+        "reward_per_terminal": 2672.3373493689937,
+        "handovers": 27237,
+        "lost": 0,
+        "td_loss": 1.489168487564971
+      },
+      {
+        "episode": 26,
+        "epsilon": 0.5883333333333334,
+        "success_pct": 100.0,
+        "reward_per_terminal": 2651.831698592753,
+        "handovers": 26809,
+        "lost": 0,
+        "td_loss": 1.8707905059059435
+      },
+      {
+        "episode": 27,
+        "epsilon": 0.5725,
+        "success_pct": 100.0,
+        "reward_per_terminal": 2685.0325642695198,
+        "handovers": 27527,
+        "lost": 0,
+        "td_loss": 1.6637851526746965
+      },
+      {
+        "episode": 28,
+        "epsilon": 0.5566666666666666,
+        "success_pct": 100.0,
+        "reward_per_terminal": 2666.7398740893627,
+        "handovers": 27133,
+        "lost": 0,
+        "td_loss": 1.923997857713385
+      },
+      {
+        "episode": 29,
+        "epsilon": 0.5408333333333333,
+        "success_pct": 100.0,
+        "reward_per_terminal": 2698.24891227689,
+        "handovers": 27714,
+        "lost": 0,
+        "td_loss": 2.047335067687468
+      },
+      {
+        "episode": 30,
+        "epsilon": 0.525,
+        "success_pct": 100.0,
+        "reward_per_terminal": 2698.415476368426,
+        "handovers": 27685,
+        "lost": 0,
+        "td_loss": 2.1510394291213584
+      },
+      {
+        "episode": 31,
+        "epsilon": 0.5091666666666667,
+        "success_pct": 100.0,
+        "reward_per_terminal": 2691.7096882474298,
+        "handovers": 27557,
+        "lost": 0,
+        "td_loss": 3.4210144023654787
+      },
+      {
+        "episode": 32,
+        "epsilon": 0.4933333333333334,
+        "success_pct": 100.0,
+        "reward_per_terminal": 2698.2820285275693,
+        "handovers": 27710,
+        "lost": 0,
+        "td_loss": 2.5855539384832773
+      },
+      {
+        "episode": 33,
+        "epsilon": 0.47750000000000004,
+        "success_pct": 100.0,
+        "reward_per_terminal": 2693.4046288044105,
+        "handovers": 27589,
+        "lost": 0,
+        "td_loss": 3.132307796219019
+      },
+      {
+        "episode": 34,
+        "epsilon": 0.46166666666666667,
+        "success_pct": 100.0,
+        "reward_per_terminal": 2711.194759013705,
+        "handovers": 27973,
+        "lost": 0,
+        "td_loss": 2.953294757312606
+      },
+      {
+        "episode": 35,
+        "epsilon": 0.4458333333333333,
+        "success_pct": 100.0,
+        "reward_per_terminal": 2714.54569510419,
+        "handovers": 27970,
+        "lost": 0,
+        "td_loss": 2.343114611792567
+      },
+      {
+        "episode": 36,
+        "epsilon": 0.43000000000000005,
+        "success_pct": 100.0,
+        "reward_per_terminal": 2692.4294274767904,
+        "handovers": 27531,
+        "lost": 0,
+        "td_loss": 3.4623617749853595
+      },
+      {
+        "episode": 37,
+        "epsilon": 0.4141666666666667,
+        "success_pct": 100.0,
+        "reward_per_terminal": 2722.838554487476,
+        "handovers": 28110,
+        "lost": 0,
+        "td_loss": 2.444547486083162
+      },
+      {
+        "episode": 38,
+        "epsilon": 0.39833333333333343,
+        "success_pct": 100.0,
+        "reward_per_terminal": 2726.80473175021,
+        "handovers": 28170,
+        "lost": 0,
+        "td_loss": 2.8229248186151223
+      },
+      {
+        "episode": 39,
+        "epsilon": 0.38250000000000006,
+        "success_pct": 100.0,
+        "reward_per_terminal": 2733.066197813508,
+        "handovers": 28348,
+        "lost": 0,
+        "td_loss": 4.349303002546877
+      },
+      {
+        "episode": 40,
+        "epsilon": 0.3666666666666667,
+        "success_pct": 100.0,
+        "reward_per_terminal": 2741.1989311215816,
+        "handovers": 28428,
+        "lost": 0,
+        "td_loss": 4.188744413222744
+      },
+      {
+        "episode": 41,
+        "epsilon": 0.35083333333333333,
+        "success_pct": 100.0,
+        "reward_per_terminal": 2657.3969415458328,
+        "handovers": 26744,
+        "lost": 0,
+        "td_loss": 4.219701236074506
+      },
+      {
+        "episode": 42,
+        "epsilon": 0.3350000000000001,
+        "success_pct": 100.0,
+        "reward_per_terminal": 2743.8743620810387,
+        "handovers": 28542,
+        "lost": 0,
+        "td_loss": 4.548070327158173
+      },
+      {
+        "episode": 43,
+        "epsilon": 0.3191666666666667,
+        "success_pct": 100.0,
+        "reward_per_terminal": 2746.438243647563,
+        "handovers": 28602,
+        "lost": 0,
+        "td_loss": 2.396659101433184
+      },
+      {
+        "episode": 44,
+        "epsilon": 0.30333333333333345,
+        "success_pct": 100.0,
+        "reward_per_terminal": 2748.4983843263103,
+        "handovers": 28662,
+        "lost": 0,
+        "td_loss": 4.7012235324786795
+      },
+      {
+        "episode": 45,
+        "epsilon": 0.2875000000000001,
+        "success_pct": 100.0,
+        "reward_per_terminal": 2745.3144865308877,
+        "handovers": 28647,
+        "lost": 0,
+        "td_loss": 2.887700977163515
+      },
+      {
+        "episode": 46,
+        "epsilon": 0.2716666666666666,
+        "success_pct": 100.0,
+        "reward_per_terminal": 2742.4724497075886,
+        "handovers": 28518,
+        "lost": 0,
+        "td_loss": 5.552570754708845
+      },
+      {
+        "episode": 47,
+        "epsilon": 0.25583333333333336,
+        "success_pct": 100.0,
+        "reward_per_terminal": 2751.6811225643296,
+        "handovers": 28874,
+        "lost": 0,
+        "td_loss": 4.0392712968440625
+      },
+      {
+        "episode": 48,
+        "epsilon": 0.24,
+        "success_pct": 100.0,
+        "reward_per_terminal": 2760.1804098826265,
+        "handovers": 28918,
+        "lost": 0,
+        "td_loss": 4.936233360396353
+      },
+      {
+        "episode": 49,
+        "epsilon": 0.22416666666666674,
+        "success_pct": 100.0,
+        "reward_per_terminal": 2755.8039545573724,
+        "handovers": 28858,
+        "lost": 0,
+        "td_loss": 4.866867624043557
+      },
+      {
+        "episode": 50,
+        "epsilon": 0.20833333333333337,
+        "success_pct": 100.0,
+        "reward_per_terminal": 2770.6788530152485,
+        "handovers": 29103,
+        "lost": 0,
+        "td_loss": 5.012203241218134
+      },
+      {
+        "episode": 51,
+        "epsilon": 0.1925,
+        "success_pct": 100.0,
+        "reward_per_terminal": 2777.466891707494,
+        "handovers": 29120,
+        "lost": 0,
+        "td_loss": 4.723270228896293
+      },
+      {
+        "episode": 52,
+        "epsilon": 0.17666666666666664,
+        "success_pct": 100.0,
+        "reward_per_terminal": 2781.3425948262825,
+        "handovers": 29254,
+        "lost": 0,
+        "td_loss": 5.511063219688964
+      },
+      {
+        "episode": 53,
+        "epsilon": 0.16083333333333338,
+        "success_pct": 100.0,
+        "reward_per_terminal": 2786.8251450724483,
+        "handovers": 29247,
+        "lost": 0,
+        "td_loss": 3.8801832136371974
+      },
+      {
+        "episode": 54,
+        "epsilon": 0.14500000000000002,
+        "success_pct": 100.0,
+        "reward_per_terminal": 2782.963427972767,
+        "handovers": 29360,
+        "lost": 0,
+        "td_loss": 4.216401918952745
+      },
+      {
+        "episode": 55,
+        "epsilon": 0.12916666666666676,
+        "success_pct": 100.0,
+        "reward_per_terminal": 2784.553088947065,
+        "handovers": 29415,
+        "lost": 0,
+        "td_loss": 6.683365937268459
+      },
+      {
+        "episode": 56,
+        "epsilon": 0.1133333333333334,
+        "success_pct": 100.0,
+        "reward_per_terminal": 2768.932466707492,
+        "handovers": 29009,
+        "lost": 0,
+        "td_loss": 7.090984126564602
+      },
+      {
+        "episode": 57,
+        "epsilon": 0.09750000000000003,
+        "success_pct": 100.0,
+        "reward_per_terminal": 2804.437653940439,
+        "handovers": 29535,
+        "lost": 0,
+        "td_loss": 8.006067340215608
+      },
+      {
+        "episode": 58,
+        "epsilon": 0.08166666666666667,
+        "success_pct": 100.0,
+        "reward_per_terminal": 2812.015269018776,
+        "handovers": 29628,
+        "lost": 0,
+        "td_loss": 7.215774650135768
+      },
+      {
+        "episode": 59,
+        "epsilon": 0.06583333333333341,
+        "success_pct": 100.0,
+        "reward_per_terminal": 2817.4837127118653,
+        "handovers": 29732,
+        "lost": 0,
+        "td_loss": 6.836559929247241
+      }
+    ],
+    "2": [
+      {
+        "episode": 0,
+        "epsilon": 1.0,
+        "success_pct": 100.0,
+        "reward_per_terminal": 2594.505650327617,
+        "handovers": 25611,
+        "lost": 0,
+        "td_loss": 1.788733304280611
+      },
+      {
+        "episode": 1,
+        "epsilon": 0.9841666666666666,
+        "success_pct": 100.0,
+        "reward_per_terminal": 2604.9847049773043,
+        "handovers": 25824,
+        "lost": 0,
+        "td_loss": 0.34810434518892047
+      },
+      {
+        "episode": 2,
+        "epsilon": 0.9683333333333334,
+        "success_pct": 100.0,
+        "reward_per_terminal": 2603.467348268029,
+        "handovers": 25790,
+        "lost": 0,
+        "td_loss": 0.4351518175025122
+      },
+      {
+        "episode": 3,
+        "epsilon": 0.9525,
+        "success_pct": 100.0,
+        "reward_per_terminal": 2610.029205301479,
+        "handovers": 25915,
+        "lost": 0,
+        "td_loss": 0.42228945498229487
+      },
+      {
+        "episode": 4,
+        "epsilon": 0.9366666666666666,
+        "success_pct": 100.0,
+        "reward_per_terminal": 2611.385727092449,
+        "handovers": 25930,
+        "lost": 0,
+        "td_loss": 0.4452514457928802
+      },
+      {
+        "episode": 5,
+        "epsilon": 0.9208333333333334,
+        "success_pct": 100.0,
+        "reward_per_terminal": 2613.370471004731,
+        "handovers": 25969,
+        "lost": 0,
+        "td_loss": 0.42060391950474735
+      },
+      {
+        "episode": 6,
+        "epsilon": 0.905,
+        "success_pct": 100.0,
+        "reward_per_terminal": 2620.535876453044,
+        "handovers": 26104,
+        "lost": 0,
+        "td_loss": 0.42539358538432354
+      },
+      {
+        "episode": 7,
+        "epsilon": 0.8891666666666667,
+        "success_pct": 100.0,
+        "reward_per_terminal": 2621.0326319119054,
+        "handovers": 26110,
+        "lost": 0,
+        "td_loss": 0.4878451770030582
+      },
+      {
+        "episode": 8,
+        "epsilon": 0.8733333333333333,
+        "success_pct": 100.0,
+        "reward_per_terminal": 2623.343297092509,
+        "handovers": 26144,
+        "lost": 0,
+        "td_loss": 0.5136145673191725
+      },
+      {
+        "episode": 9,
+        "epsilon": 0.8575,
+        "success_pct": 100.0,
+        "reward_per_terminal": 2629.2673391294993,
+        "handovers": 26253,
+        "lost": 0,
+        "td_loss": 0.5807977751964916
+      },
+      {
+        "episode": 10,
+        "epsilon": 0.8416666666666667,
+        "success_pct": 100.0,
+        "reward_per_terminal": 2635.592072412575,
+        "handovers": 26378,
+        "lost": 0,
+        "td_loss": 0.47124533051899237
+      },
+      {
+        "episode": 11,
+        "epsilon": 0.8258333333333334,
+        "success_pct": 100.0,
+        "reward_per_terminal": 2639.612046169902,
+        "handovers": 26449,
+        "lost": 0,
+        "td_loss": 0.5243097469649758
+      },
+      {
+        "episode": 12,
+        "epsilon": 0.81,
+        "success_pct": 100.0,
+        "reward_per_terminal": 2642.0767537150728,
+        "handovers": 26498,
+        "lost": 0,
+        "td_loss": 0.566690034752944
+      },
+      {
+        "episode": 13,
+        "epsilon": 0.7941666666666667,
+        "success_pct": 100.0,
+        "reward_per_terminal": 2642.791572093948,
+        "handovers": 26505,
+        "lost": 0,
+        "td_loss": 0.541494865119385
+      },
+      {
+        "episode": 14,
+        "epsilon": 0.7783333333333333,
+        "success_pct": 100.0,
+        "reward_per_terminal": 2650.1490094718515,
+        "handovers": 26649,
+        "lost": 0,
+        "td_loss": 0.6937015413941638
+      },
+      {
+        "episode": 15,
+        "epsilon": 0.7625,
+        "success_pct": 100.0,
+        "reward_per_terminal": 2639.4513232423665,
+        "handovers": 26428,
+        "lost": 0,
+        "td_loss": 0.9745235185871165
+      },
+      {
+        "episode": 16,
+        "epsilon": 0.7466666666666667,
+        "success_pct": 100.0,
+        "reward_per_terminal": 2654.006595481294,
+        "handovers": 26712,
+        "lost": 0,
+        "td_loss": 0.7534310724275717
+      },
+      {
+        "episode": 17,
+        "epsilon": 0.7308333333333333,
+        "success_pct": 100.0,
+        "reward_per_terminal": 2658.872618903733,
+        "handovers": 26808,
+        "lost": 0,
+        "td_loss": 1.1498794351659838
+      },
+      {
+        "episode": 18,
+        "epsilon": 0.7150000000000001,
+        "success_pct": 100.0,
+        "reward_per_terminal": 2627.3006326560326,
+        "handovers": 26183,
+        "lost": 0,
+        "td_loss": 1.2477813439991936
+      },
+      {
+        "episode": 19,
+        "epsilon": 0.6991666666666667,
+        "success_pct": 100.0,
+        "reward_per_terminal": 2638.2840049814486,
+        "handovers": 26415,
+        "lost": 0,
+        "td_loss": 1.1754882210479973
+      },
+      {
+        "episode": 20,
+        "epsilon": 0.6833333333333333,
+        "success_pct": 100.0,
+        "reward_per_terminal": 2631.8210733470564,
+        "handovers": 26307,
+        "lost": 0,
+        "td_loss": 1.471387497108343
+      },
+      {
+        "episode": 21,
+        "epsilon": 0.6675,
+        "success_pct": 100.0,
+        "reward_per_terminal": 2663.6319736191026,
+        "handovers": 26978,
+        "lost": 0,
+        "td_loss": 1.367679484758722
+      },
+      {
+        "episode": 22,
+        "epsilon": 0.6516666666666667,
+        "success_pct": 100.0,
+        "reward_per_terminal": 2648.5570430280795,
+        "handovers": 26699,
+        "lost": 0,
+        "td_loss": 1.5246906398335847
+      },
+      {
+        "episode": 23,
+        "epsilon": 0.6358333333333333,
+        "success_pct": 100.0,
+        "reward_per_terminal": 2643.2205788859765,
+        "handovers": 26614,
+        "lost": 0,
+        "td_loss": 1.5092926108081663
+      },
+      {
+        "episode": 24,
+        "epsilon": 0.62,
+        "success_pct": 100.0,
+        "reward_per_terminal": 2676.538356894481,
+        "handovers": 27310,
+        "lost": 0,
+        "td_loss": 1.4999243435321503
+      },
+      {
+        "episode": 25,
+        "epsilon": 0.6041666666666667,
+        "success_pct": 100.0,
+        "reward_per_terminal": 2676.7072424439684,
+        "handovers": 27294,
+        "lost": 0,
+        "td_loss": 2.2187302595296328
+      },
+      {
+        "episode": 26,
+        "epsilon": 0.5883333333333334,
+        "success_pct": 100.0,
+        "reward_per_terminal": 2606.8228292400263,
+        "handovers": 25896,
+        "lost": 0,
+        "td_loss": 1.9188833171643922
+      },
+      {
+        "episode": 27,
+        "epsilon": 0.5725,
+        "success_pct": 100.0,
+        "reward_per_terminal": 2674.090652780814,
+        "handovers": 27287,
+        "lost": 0,
+        "td_loss": 1.9524708352870364
+      },
+      {
+        "episode": 28,
+        "epsilon": 0.5566666666666666,
+        "success_pct": 100.0,
+        "reward_per_terminal": 2684.4844159616396,
+        "handovers": 27498,
+        "lost": 0,
+        "td_loss": 2.4014191593562875
+      },
+      {
+        "episode": 29,
+        "epsilon": 0.5408333333333333,
+        "success_pct": 100.0,
+        "reward_per_terminal": 2684.272756316693,
+        "handovers": 27497,
+        "lost": 0,
+        "td_loss": 2.804785763537333
+      },
+      {
+        "episode": 30,
+        "epsilon": 0.525,
+        "success_pct": 100.0,
+        "reward_per_terminal": 2678.687419687418,
+        "handovers": 27422,
+        "lost": 0,
+        "td_loss": 1.7126471950461826
+      },
+      {
+        "episode": 31,
+        "epsilon": 0.5091666666666667,
+        "success_pct": 100.0,
+        "reward_per_terminal": 2652.400000899223,
+        "handovers": 26845,
+        "lost": 0,
+        "td_loss": 2.908014387593502
+      },
+      {
+        "episode": 32,
+        "epsilon": 0.4933333333333334,
+        "success_pct": 100.0,
+        "reward_per_terminal": 2701.9491712198896,
+        "handovers": 27910,
+        "lost": 0,
+        "td_loss": 1.674299471363157
+      },
+      {
+        "episode": 33,
+        "epsilon": 0.47750000000000004,
+        "success_pct": 100.0,
+        "reward_per_terminal": 2703.5038510485065,
+        "handovers": 27899,
+        "lost": 0,
+        "td_loss": 3.310332438226912
+      },
+      {
+        "episode": 34,
+        "epsilon": 0.46166666666666667,
+        "success_pct": 100.0,
+        "reward_per_terminal": 2710.216925655284,
+        "handovers": 28005,
+        "lost": 0,
+        "td_loss": 3.1071747790526594
+      },
+      {
+        "episode": 35,
+        "epsilon": 0.4458333333333333,
+        "success_pct": 100.0,
+        "reward_per_terminal": 2668.583773903063,
+        "handovers": 27097,
+        "lost": 0,
+        "td_loss": 2.874694128108438
+      },
+      {
+        "episode": 36,
+        "epsilon": 0.43000000000000005,
+        "success_pct": 100.0,
+        "reward_per_terminal": 2720.5963766275718,
+        "handovers": 28122,
+        "lost": 0,
+        "td_loss": 3.407184360628342
+      },
+      {
+        "episode": 37,
+        "epsilon": 0.4141666666666667,
+        "success_pct": 100.0,
+        "reward_per_terminal": 2694.147284454301,
+        "handovers": 27682,
+        "lost": 0,
+        "td_loss": 3.8158057433037076
+      },
+      {
+        "episode": 38,
+        "epsilon": 0.39833333333333343,
+        "success_pct": 100.0,
+        "reward_per_terminal": 2722.792097557023,
+        "handovers": 28183,
+        "lost": 0,
+        "td_loss": 3.5288062618399136
+      },
+      {
+        "episode": 39,
+        "epsilon": 0.38250000000000006,
+        "success_pct": 100.0,
+        "reward_per_terminal": 2700.914261909066,
+        "handovers": 27786,
+        "lost": 0,
+        "td_loss": 4.530108809170338
+      },
+      {
+        "episode": 40,
+        "epsilon": 0.3666666666666667,
+        "success_pct": 100.0,
+        "reward_per_terminal": 2674.084286677319,
+        "handovers": 27160,
+        "lost": 0,
+        "td_loss": 4.426678669863624
+      },
+      {
+        "episode": 41,
+        "epsilon": 0.35083333333333333,
+        "success_pct": 100.0,
+        "reward_per_terminal": 2744.805887071605,
+        "handovers": 28495,
+        "lost": 0,
+        "td_loss": 2.8779426027758843
+      },
+      {
+        "episode": 42,
+        "epsilon": 0.3350000000000001,
+        "success_pct": 100.0,
+        "reward_per_terminal": 2749.105429784303,
+        "handovers": 28493,
+        "lost": 0,
+        "td_loss": 4.937932456559823
+      },
+      {
+        "episode": 43,
+        "epsilon": 0.3191666666666667,
+        "success_pct": 100.0,
+        "reward_per_terminal": 2755.7365392902293,
+        "handovers": 28691,
+        "lost": 0,
+        "td_loss": 4.586893749885733
+      },
+      {
+        "episode": 44,
+        "epsilon": 0.30333333333333345,
+        "success_pct": 100.0,
+        "reward_per_terminal": 2752.1383361626413,
+        "handovers": 28651,
+        "lost": 0,
+        "td_loss": 3.7235862802119355
+      },
+      {
+        "episode": 45,
+        "epsilon": 0.2875000000000001,
+        "success_pct": 100.0,
+        "reward_per_terminal": 2752.9521285050278,
+        "handovers": 28699,
+        "lost": 0,
+        "td_loss": 4.7287614186838
+      },
+      {
+        "episode": 46,
+        "epsilon": 0.2716666666666666,
+        "success_pct": 100.0,
+        "reward_per_terminal": 2758.8837680052948,
+        "handovers": 28761,
+        "lost": 0,
+        "td_loss": 5.648037480373932
+      },
+      {
+        "episode": 47,
+        "epsilon": 0.25583333333333336,
+        "success_pct": 100.0,
+        "reward_per_terminal": 2765.8189958472,
+        "handovers": 28820,
+        "lost": 0,
+        "td_loss": 6.359634002487762
+      },
+      {
+        "episode": 48,
+        "epsilon": 0.24,
+        "success_pct": 100.0,
+        "reward_per_terminal": 2768.1260931187744,
+        "handovers": 28894,
+        "lost": 0,
+        "td_loss": 5.7794575282187255
+      },
+      {
+        "episode": 49,
+        "epsilon": 0.22416666666666674,
+        "success_pct": 100.0,
+        "reward_per_terminal": 2775.7999582120347,
+        "handovers": 29048,
+        "lost": 0,
+        "td_loss": 3.512955453089174
+      },
+      {
+        "episode": 50,
+        "epsilon": 0.20833333333333337,
+        "success_pct": 100.0,
+        "reward_per_terminal": 2776.253461205401,
+        "handovers": 29095,
+        "lost": 0,
+        "td_loss": 5.07938425784044
+      },
+      {
+        "episode": 51,
+        "epsilon": 0.1925,
+        "success_pct": 100.0,
+        "reward_per_terminal": 2775.9604377694077,
+        "handovers": 29161,
+        "lost": 0,
+        "td_loss": 5.24343007557242
+      },
+      {
+        "episode": 52,
+        "epsilon": 0.17666666666666664,
+        "success_pct": 100.0,
+        "reward_per_terminal": 2779.291103934121,
+        "handovers": 29240,
+        "lost": 0,
+        "td_loss": 5.368568976313608
+      },
+      {
+        "episode": 53,
+        "epsilon": 0.16083333333333338,
+        "success_pct": 100.0,
+        "reward_per_terminal": 2740.945158773754,
+        "handovers": 28521,
+        "lost": 0,
+        "td_loss": 5.985189709912305
+      },
+      {
+        "episode": 54,
+        "epsilon": 0.14500000000000002,
+        "success_pct": 100.0,
+        "reward_per_terminal": 2785.227660838198,
+        "handovers": 29378,
+        "lost": 0,
+        "td_loss": 6.844065005302123
+      },
+      {
+        "episode": 55,
+        "epsilon": 0.12916666666666676,
+        "success_pct": 100.0,
+        "reward_per_terminal": 2783.4964878556852,
+        "handovers": 29411,
+        "lost": 0,
+        "td_loss": 5.833231104290766
+      },
+      {
+        "episode": 56,
+        "epsilon": 0.1133333333333334,
+        "success_pct": 100.0,
+        "reward_per_terminal": 2787.6498928153087,
+        "handovers": 29509,
+        "lost": 0,
+        "td_loss": 4.991431627345852
+      },
+      {
+        "episode": 57,
+        "epsilon": 0.09750000000000003,
+        "success_pct": 100.0,
+        "reward_per_terminal": 2790.1740043331783,
+        "handovers": 29557,
+        "lost": 0,
+        "td_loss": 6.355981213137281
+      },
+      {
+        "episode": 58,
+        "epsilon": 0.08166666666666667,
+        "success_pct": 100.0,
+        "reward_per_terminal": 2792.2421979662176,
+        "handovers": 29614,
+        "lost": 0,
+        "td_loss": 5.48734694265838
+      },
+      {
+        "episode": 59,
+        "epsilon": 0.06583333333333341,
+        "success_pct": 100.0,
+        "reward_per_terminal": 2797.4233956009775,
+        "handovers": 29712,
+        "lost": 0,
+        "td_loss": 8.516017847440878
+      }
+    ]
+  }
+}

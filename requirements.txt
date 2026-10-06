@@ -1,0 +1,9 @@
+# gapmoh_sim runtime dependencies.
+#
+# Deliberately minimal: the whole simulator is numpy. There is no torch, no
+# skyfield and no sgp4 -- see deviation D1 for why skyfield/SGP4 is not used
+# (the constellation is fictitious and this repository contains no TLEs).
+# Stage 1, if it is ever authorised, would add torch as an optional backend.
+numpy>=2.0
+matplotlib>=3.8
+pytest>=8.0

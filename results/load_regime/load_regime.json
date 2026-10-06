@@ -1,0 +1,100 @@
+{
+  "spec": {
+    "horizon_s": 900.0,
+    "seed": 0,
+    "capacity_per_sat": 50,
+    "n_lane": 3,
+    "sigma_deg": 1.0,
+    "arm": "gapmoh"
+  },
+  "rows": [
+    {
+      "deployment": "uniform",
+      "terminals": 100,
+      "peak_concurrent": 4,
+      "peak_over_capacity": 0,
+      "overflow_terminal_seconds": 0.0,
+      "top1_share": 0.01217198089101211,
+      "n_active_sat": 260,
+      "mean_load_active_sat": 0.38461538461538464,
+      "cap_binds": false
+    },
+    {
+      "deployment": "uniform",
+      "terminals": 200,
+      "peak_concurrent": 6,
+      "peak_over_capacity": 0,
+      "overflow_terminal_seconds": 0.0,
+      "top1_share": 0.012172536384846128,
+      "n_active_sat": 339,
+      "mean_load_active_sat": 0.5899705014749262,
+      "cap_binds": false
+    },
+    {
+      "deployment": "uniform",
+      "terminals": 400,
+      "peak_concurrent": 10,
+      "peak_over_capacity": 0,
+      "overflow_terminal_seconds": 0.0,
+      "top1_share": 0.009680591045439396,
+      "n_active_sat": 380,
+      "mean_load_active_sat": 1.0526315789473684,
+      "cap_binds": false
+    },
+    {
+      "deployment": "uniform",
+      "terminals": 700,
+      "peak_concurrent": 15,
+      "peak_over_capacity": 0,
+      "overflow_terminal_seconds": 0.0,
+      "top1_share": 0.008967733743869728,
+      "n_active_sat": 406,
+      "mean_load_active_sat": 1.7241379310344827,
+      "cap_binds": false
+    },
+    {
+      "deployment": "lane",
+      "terminals": 50,
+      "peak_concurrent": 12,
+      "peak_over_capacity": 0,
+      "overflow_terminal_seconds": 0.0,
+      "top1_share": 0.058311298744583934,
+      "n_active_sat": 70,
+      "mean_load_active_sat": 0.7142857142857143,
+      "cap_binds": false
+    },
+    {
+      "deployment": "lane",
+      "terminals": 100,
+      "peak_concurrent": 19,
+      "peak_over_capacity": 0,
+      "overflow_terminal_seconds": 0.0,
+      "top1_share": 0.051020997666925895,
+      "n_active_sat": 92,
+      "mean_load_active_sat": 1.0869565217391306,
+      "cap_binds": false
+    },
+    {
+      "deployment": "lane",
+      "terminals": 200,
+      "peak_concurrent": 36,
+      "peak_over_capacity": 0,
+      "overflow_terminal_seconds": 0.0,
+      "top1_share": 0.04439895567159204,
+      "n_active_sat": 104,
+      "mean_load_active_sat": 1.923076923076923,
+      "cap_binds": false
+    },
+    {
+      "deployment": "lane",
+      "terminals": 300,
+      "peak_concurrent": 55,
+      "peak_over_capacity": 5,
+      "overflow_terminal_seconds": 1359.3000000000002,
+      "top1_share": 0.04628115394585787,
+      "n_active_sat": 107,
+      "mean_load_active_sat": 2.8037383177570097,
+      "cap_binds": true
+    }
+  ]
+}

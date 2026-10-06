@@ -1,0 +1,42 @@
+================================================================================================
+SUCCESS-CRITERION PROBE
+  M=20  horizon=1800 s  seed=0  T_hold=30 s  rain=7.64 mm/h  SNR_min=10 dB  mask=15 deg
+================================================================================================
+pass tables ready in 136.1 s (358 passes/terminal)
+
+================================================================================================
+  require_rising=True
+================================================================================================
+
+scheme                  n       C0       C1       C2       C3       C4
+RSS-Threshold         245    100.0    100.0    100.0    100.0     99.6
+Graph-Dijkstra        117    100.0    100.0    100.0     53.8    100.0
+CNN-LSTM-Predict      203    100.0    100.0    100.0    100.0    100.0
+MADRL-Std             132    100.0    100.0    100.0    100.0    100.0
+Grid-Only             159    100.0    100.0    100.0    100.0    100.0
+GAP-MOH               159    100.0    100.0    100.0    100.0    100.0
+
+spread (pp)                    0.0      0.0      0.0     46.2      0.4
+
+  C0 timing only | C1 +target above mask at completion | C2 +still above mask T_hold later
+  C3 +closes under rain | C4 C2 +no re-handover within T_hold
+
+================================================================================================
+  require_rising=False (rules as written)
+================================================================================================
+
+scheme                  n       C0       C1       C2       C3       C4
+RSS-Threshold        1830    100.0    100.0    100.0    100.0     23.2
+Graph-Dijkstra        117    100.0    100.0    100.0     53.8    100.0
+CNN-LSTM-Predict      238    100.0    100.0    100.0    100.0    100.0
+MADRL-Std             132    100.0    100.0    100.0    100.0    100.0
+Grid-Only             169    100.0    100.0    100.0    100.0    100.0
+GAP-MOH               169    100.0    100.0    100.0    100.0    100.0
+
+spread (pp)                    0.0      0.0      0.0     46.2     76.8
+
+  C0 timing only | C1 +target above mask at completion | C2 +still above mask T_hold later
+  C3 +closes under rain | C4 C2 +no re-handover within T_hold
+
+wrote D:\论文\LEO卫星快速搜网\gapmoh_sim\results\success_probe\success_probe.json
+wall clock 559.6 s

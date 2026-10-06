@@ -1,0 +1,21 @@
+C3 PROBE   M=12 terminals   horizon=1800 s
+C=50 free slots/constellation-cap check; quality = target SNR >= serving SNR
+============================================================================================
+pass tables ready in 82.2 s
+============================================================================================
+scheme               n_ho    C1 %    C2 %    C3 %  q-fail %  mean dSNR  dSNR<0 share
+--------------------------------------------------------------------------------------------
+RSS-Threshold        1195   100.0   100.0   100.0       0.0        0.8          0.0%
+Graph-Dijkstra         70   100.0   100.0     0.0     100.0       -3.4        100.0%
+CNN-LSTM-Predict      143   100.0   100.0   100.0       0.0        5.9          0.0%
+MADRL-Std              78   100.0   100.0   100.0       0.0        0.9          0.0%
+Grid-Only             100   100.0   100.0   100.0       0.0        8.4          0.0%
+GAP-MOH               100   100.0   100.0   100.0       0.0        8.4          0.0%
+--------------------------------------------------------------------------------------------
+C1 spread across schemes: 0.00 pp   (min 100.0%, max 100.0%)
+C2 spread across schemes: 0.00 pp   (min 100.0%, max 100.0%)
+C3 spread across schemes: 100.00 pp   (min 0.0%, max 100.0%)
+============================================================================================
+If C3 spread is still ~0, the criterion is NOT the remedy and the
+disposition must be a framing/description change, not a metric change.
+wall clock 193.7 s
