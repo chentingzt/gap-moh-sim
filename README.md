@@ -73,7 +73,7 @@ gapmoh/                 the simulator package
   metrics_v2.py         the rebuilt metric set (M1–M5) used by 05/08/09
   rl/                   NumPy DQN stack: env.py, nets.py, policy_target.py
 
-scripts/                11 numbered entry points (see below)
+scripts/                13 numbered entry points (see below)
 tests/                  7 modules, 42 assertions
 results/                committed run artefacts (JSON + logs + one PNG)
 requirements.txt        numpy / matplotlib / pytest
@@ -94,11 +94,22 @@ requirements.txt        numpy / matplotlib / pytest
 | `09_ablation_drl.py` | framework ablation (grid priors / GBPT / DRL arms) |
 | `10_probe_headroom.py` | timing-headroom probe |
 | `11_probe_load_regime.py` | per-satellite load-regime probe |
+| `12_probe_rb.py` | candidate replacements for the withdrawn “unnecessary handover” row: cross-scheme span and endpoint share, for each candidate (R-B probe) |
+| `13_target_elev.py` | X-10 closure: the **distribution** (mean / p05 / min) of the handover target's elevation, at the handover instant and at the target's pass peak |
 
 > Scripts `03_*` and `04_*` do not exist. They were planned and then dropped
 > once the Stage-0 gate showed that generating a paper-format comparison table
 > was premature. The numbering is left as-is rather than renumbered, so that the
 > script numbers referenced elsewhere still resolve.
+
+> Scripts `12_*` and `13_*` were added after the initial release, for two
+> revisions the manuscript made in response to review. `12` measured candidate
+> replacements for the withdrawn “unnecessary handover” row; `13` produced the
+> distribution (mean / p05 / min) behind the target-link-elevation row, under
+> both readings of “the handover target's elevation”. Their committed outputs
+> are `results/rb_probe/` and `results/target_elev/` respectively. Note that
+> `12`'s docstring and console strings are in Chinese, unlike the rest of the
+> tree — it is published as written rather than translated.
 
 ---
 

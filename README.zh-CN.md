@@ -57,7 +57,7 @@ gapmoh/                 仿真器包
   metrics_v2.py         重建后的指标集 M1–M5（供 05/08/09 使用）
   rl/                   NumPy DQN 栈：env.py / nets.py / policy_target.py
 
-scripts/                11 个编号入口（00 → 11）
+scripts/                13 个编号入口（00 → 13）
 tests/                  7 个模块、42 项断言
 results/                随仓库提交的运行产物（JSON + 日志 + 1 张 PNG）
 requirements.txt        numpy / matplotlib / pytest

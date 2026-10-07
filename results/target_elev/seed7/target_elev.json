@@ -1,0 +1,91 @@
+{
+  "seed": 7,
+  "terminals": 100,
+  "horizon_s": 3600.0,
+  "per_scheme": {
+    "rss": {
+      "n": 2318,
+      "target_snr_mean": 28.13040836890705,
+      "target_snr_p05": 23.90389746489729,
+      "target_snr_min": 22.771289978548324,
+      "target_elev_mean": 62.55743407284187,
+      "target_elev_p05": 28.037853794350674,
+      "target_elev_min": 23.031873410323534,
+      "target_peak_elev_n": 2318,
+      "target_peak_elev_mean": 66.77104643867779,
+      "target_peak_elev_p05": 28.395188389954292,
+      "target_peak_elev_min": 23.286728038587217,
+      "label": "RSS-Threshold"
+    },
+    "dijkstra": {
+      "n": 1200,
+      "target_snr_mean": 21.111956260922295,
+      "target_snr_p05": 20.696131511037727,
+      "target_snr_min": 20.620367196378496,
+      "target_elev_mean": 16.716852867805866,
+      "target_elev_p05": 15.262543326051704,
+      "target_elev_min": 15.004577578014993,
+      "target_peak_elev_n": 1200,
+      "target_peak_elev_mean": 70.04169742528603,
+      "target_peak_elev_p05": 50.4143555441704,
+      "target_peak_elev_min": 45.31653773248876,
+      "label": "Graph-Dijkstra"
+    },
+    "cnnlstm": {
+      "n": 2125,
+      "target_snr_mean": 28.667348139847697,
+      "target_snr_p05": 27.8469158475079,
+      "target_snr_min": 27.009526057708925,
+      "target_elev_mean": 65.94409149028044,
+      "target_elev_p05": 54.76478056910762,
+      "target_elev_min": 47.030046817202084,
+      "target_peak_elev_n": 2125,
+      "target_peak_elev_mean": 76.65124653361069,
+      "target_peak_elev_p05": 59.85316941749175,
+      "target_peak_elev_min": 49.179994831435735,
+      "label": "CNN-LSTM-Predict"
+    },
+    "madrl_std": {
+      "n": 1274,
+      "target_snr_mean": 22.975399036213815,
+      "target_snr_p05": 22.340010606259852,
+      "target_snr_min": 22.2676685476511,
+      "target_elev_mean": 23.92742472905435,
+      "target_elev_p05": 21.28782221001744,
+      "target_elev_min": 21.002838123686228,
+      "target_peak_elev_n": 1274,
+      "target_peak_elev_mean": 69.99173105866878,
+      "target_peak_elev_p05": 48.005098342134744,
+      "target_peak_elev_min": 42.00062830792854,
+      "label": "MADRL-Std"
+    },
+    "grid_only": {
+      "n": 1611,
+      "target_snr_mean": 28.758371964086837,
+      "target_snr_p05": 27.802479329379167,
+      "target_snr_min": 27.69621067775323,
+      "target_elev_mean": 68.72662108062178,
+      "target_elev_p05": 54.30082236849526,
+      "target_elev_min": 53.220134557738064,
+      "target_peak_elev_n": 1611,
+      "target_peak_elev_mean": 74.31856597957885,
+      "target_peak_elev_p05": 57.94307782033667,
+      "target_peak_elev_min": 54.497479424258366,
+      "label": "Grid-Only"
+    },
+    "gapmoh": {
+      "n": 1611,
+      "target_snr_mean": 28.75854108609828,
+      "target_snr_p05": 27.802953941213957,
+      "target_snr_min": 27.69635234223476,
+      "target_elev_mean": 68.73006922382966,
+      "target_elev_p05": 54.3057388848226,
+      "target_elev_min": 53.22154929136214,
+      "target_peak_elev_n": 1611,
+      "target_peak_elev_mean": 74.31856597957885,
+      "target_peak_elev_p05": 57.94307782033667,
+      "target_peak_elev_min": 54.497479424258366,
+      "label": "GAP-MOH"
+    }
+  }
+}
