@@ -56,16 +56,27 @@ def target_quality(events):
     """
     snr = np.array([e.target_snr_db for e in events], dtype=float)
     elev = np.array([e.target_elev_deg for e in events], dtype=float)
+    # The peak the handed-to pass ever reaches. Not stored by older runs, so it
+    # is read defensively and simply omitted from the statistics when absent --
+    # `target_peak_elev_mean` then comes back NaN rather than raising, which
+    # keeps every cached `new_metrics.json` from the 10-seed run readable.
+    peak = np.array([getattr(e, "target_peak_elev_deg", float("nan"))
+                     for e in events], dtype=float)
     snr = snr[np.isfinite(snr)]
     elev = elev[np.isfinite(elev)]
+    peak = peak[np.isfinite(peak)]
     if snr.size == 0 or elev.size == 0:
         return {"n": 0, "target_snr_mean": float("nan"),
                 "target_snr_p05": float("nan"),
                 "target_snr_min": float("nan"),
                 "target_elev_mean": float("nan"),
                 "target_elev_p05": float("nan"),
-                "target_elev_min": float("nan")}
-    return {
+                "target_elev_min": float("nan"),
+                "target_peak_elev_n": 0,
+                "target_peak_elev_mean": float("nan"),
+                "target_peak_elev_p05": float("nan"),
+                "target_peak_elev_min": float("nan")}
+    out = {
         "n": int(snr.size),
         "target_snr_mean": float(snr.mean()),
         "target_snr_p05": float(np.percentile(snr, 5)),
@@ -73,7 +84,15 @@ def target_quality(events):
         "target_elev_mean": float(elev.mean()),
         "target_elev_p05": float(np.percentile(elev, 5)),
         "target_elev_min": float(elev.min()),
+        "target_peak_elev_n": int(peak.size),
+        "target_peak_elev_mean": float(peak.mean()) if peak.size
+        else float("nan"),
+        "target_peak_elev_p05": float(np.percentile(peak, 5)) if peak.size
+        else float("nan"),
+        "target_peak_elev_min": float(peak.min()) if peak.size
+        else float("nan"),
     }
+    return out
 
 
 def availability(serving_trace, cfg, rain_rate_mm_h=None, snr_min_db=None):

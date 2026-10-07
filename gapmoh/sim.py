@@ -66,6 +66,12 @@ class HandoverEvent:
     target_sat: int = -1
     target_snr_db: float = float("nan")
     target_elev_deg: float = float("nan")
+    # Elevation (deg) the TARGET satellite reaches at the peak of THIS pass --
+    # i.e. the best the handed-to link ever gets, as opposed to
+    # `target_elev_deg`, which is where it stands at t_init. `nan` when there is
+    # no target (a forced failure). Additive: the default keeps every existing
+    # reader and every existing number unchanged.
+    target_peak_elev_deg: float = float("nan")
 
 
 @dataclass
@@ -388,5 +394,6 @@ def _emit(trace, table, scheme, cfg, con, terms_of, serving, t_init, t_exit,
         target_remaining_s=float(table.t_exit[tgt] - t_init),
         target_ok=bool(target_ok), target_sat=int(table.sat[tgt]),
         target_snr_db=float(csnr[j]),
-        target_elev_deg=float(np.rad2deg(ce[j]))))
+        target_elev_deg=float(np.rad2deg(ce[j])),
+        target_peak_elev_deg=float(np.rad2deg(table.elev_peak[tgt]))))
     return tgt

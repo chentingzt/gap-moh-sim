@@ -136,6 +136,18 @@ def aggregate(base, order, out_path):
             "serve_elev_mean": _ci(series(["per_scheme", key,
                                            "m2_availability",
                                            "serving_elev_mean_deg"])),
+            # R-B replacement row (2026-10-06). Both are whole-trace tail
+            # statistics of the SERVING link -- not values read at the
+            # trigger instant, and not the target-star rule's objective --
+            # so unlike "unnecessary handovers" they are not fixed by each
+            # scheme's own rule. Already computed by metrics_v2.availability;
+            # surfaced here only. Additive: no existing key changes.
+            "serving_snr_p05": _ci(series(["per_scheme", key,
+                                           "m2_availability",
+                                           "serving_snr_p05"])),
+            "serve_elev_min": _ci(series(["per_scheme", key,
+                                          "m2_availability",
+                                          "min_elev_deg"])),
             "unnecessary_pct": _ci([100.0 * v if v is not None else None
                                     for v in series(
                                         ["per_scheme", key, "m3_unnecessary",
@@ -256,6 +268,8 @@ def main():
     show("M1 target elevation", "target_elev_mean", "deg")
     show("M1 target SNR", "target_snr_mean", "dB")
     show("M2 serving SNR (clear)", "serving_snr_mean", "dB")
+    show("M2 serving SNR, 5th percentile", "serving_snr_p05", "dB")
+    show("M2 serving elevation, minimum", "serve_elev_min", "deg")
     show("M2 A_rain", "a_rain_pct", "%")
     show("M3 unnecessary (by elevation)", "unnecessary_pct", "%")
     show("M4 frequency", "freq_per_h", "events/h")
